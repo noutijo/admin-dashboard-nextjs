@@ -1,6 +1,3 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { cardItemType } from "../../types/types";
 
 const CardItem = ({
@@ -15,14 +12,14 @@ const CardItem = ({
 }: cardItemType) => {
   return (
     <>
-      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-lg mt-4 transition-all duration-300 ease-out shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7">
+      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7">
         <span
           className={`material-icons-sharp p-2 rounded-full text-colorWhite text-[2rem] ${bgcolor}`}>
           {iconName}
         </span>
         <div className="flex items-center justify-between">
           <div className="left">
-            <h3 className="text-base m-[1rem_0_0.6rem]">{title}</h3>
+            <h3 className="text-sm m-[1rem_0_0.6rem]">{title}</h3>
             <h1>${price}</h1>
           </div>
           <div className="relative w-[80px] h-[80px] rounded-full">

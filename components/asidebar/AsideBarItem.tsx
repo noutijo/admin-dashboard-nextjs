@@ -1,6 +1,3 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { menuItemType } from "../../types/types";
 
 const AsideBarItem = ({ title, iconName, messageAccount }: menuItemType) => {

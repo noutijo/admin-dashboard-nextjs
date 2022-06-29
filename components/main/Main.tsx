@@ -1,9 +1,41 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cardItemType } from "../../types/types";
+import { orderType } from "../../types/types";
 import CardItem from "./CardItem";
+import OrderItem from "./OrderItem";
+
+const orders: orderType[] = [
+  {
+    productName: "nooutidev Shoe brand",
+    productNumber: "1234",
+    paymentStatus: "Due",
+    shipping: "Pending",
+  },
+  {
+    productName: "nooutidev t-shirt brand",
+    productNumber: "1235",
+    paymentStatus: "Refunded",
+    shipping: "Declined",
+  },
+  {
+    productName: "nooutidev cap brand",
+    productNumber: "1236",
+    paymentStatus: "Due",
+    shipping: "Pending",
+  },
+  {
+    productName: "nooutidev bag brand",
+    productNumber: "1237",
+    paymentStatus: "Paid",
+    shipping: "Delivered",
+  },
+  {
+    productName: "nooutidev phone brand",
+    productNumber: "1238",
+    paymentStatus: "Paid",
+    shipping: "Delivered",
+  },
+];
 
 const data: cardItemType[] = [
   {
@@ -38,7 +70,7 @@ const data: cardItemType[] = [
   },
 ];
 
-const Main: NextPage = () => {
+const Main = () => {
   const [_document, set_document] = useState<Document | null>(null);
 
   useEffect(() => {
@@ -80,8 +112,8 @@ const Main: NextPage = () => {
         </div>
 
         <div className="mt-8">
-          <h2>Recent Orders</h2>
-          <table>
+          <h2 className="mb-3">Recent Orders</h2>
+          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full rounded-3xl p-[3rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
                 <th>Product Name</th>
@@ -91,9 +123,19 @@ const Main: NextPage = () => {
                 <th></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {orders.map((item: orderType) => (
+                <OrderItem
+                  key={item.productName}
+                  productName={item.productName}
+                  productNumber={item.productNumber}
+                  paymentStatus={item.paymentStatus}
+                  shipping={item.shipping}
+                />
+              ))}
+            </tbody>
           </table>
-          <a href="#">Show All</a>
+          <a className="text-center block m-[1rem_auto] text-colorPrimary" href="#">Show All</a>
         </div>
       </main>
     </>
