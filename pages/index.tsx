@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <div className="container">
+      <div className="grid lg:grid-cols-[14rem_auto_23rem] w-[96%] gap-7 m-[0_auto]">
        <AsideBar />
        <Main />
        <Right />

@@ -11,14 +11,14 @@ const Main: NextPage = () => {
   }, []);
 
   const addDark = (): void => {
-    _document?.documentElement.classList.add("light");
+    _document?.documentElement.classList.add("dar");
   };
   //enable darkmode by default
   addDark();
 
   return (
     <>
-      <main className="dark:bg-colorPrimary">
+      <main>
         <h1>Dashboard</h1>
 
         <div className="date">

@@ -1,70 +1,78 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import AsideBarItem from "./AsideBarItem";
+import { menuItemType } from "../../types/menuTypes";
+
+let data: menuItemType[] = [
+  {
+    title: `Dashboard`,
+    iconName: `grid_view`,
+  },
+  {
+    title: `Customers`,
+    iconName: `person_outline`,
+  },
+  {
+    title: `Orders`,
+    iconName: `receipt_long`,
+  },
+  {
+    title: `Analytics`,
+    iconName: `insights`,
+  },
+  {
+    title: `Messages`,
+    iconName: `mail_outline`,
+    messageAccount: 23,
+  },
+  {
+    title: `Products`,
+    iconName: `inventory`,
+  },
+  {
+    title: `Reports`,
+    iconName: `report_gmailerrorred`,
+  },
+  {
+    title: `Settings`,
+    iconName: `settings`,
+  },
+  {
+    title: `Add Product`,
+    iconName: `add`,
+  },
+  {
+    title: `Logout`,
+    iconName: `logout`,
+  },
+];
 
 const AsideBar: NextPage = () => {
   return (
     <>
-      <aside>
-        <div className="top">
-          <div className="logo">
-            <Image
-              src="/images/logo.png"
-              alt="logo"
-              width={45}
-              height={30}
-            />
-            <h2>
+      <aside className="h-screen">
+        <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center gap-3">
+            <Image src="/images/logo.png" alt="logo" width={45} height={30} />
+            <h2 className="hidden lg:block ">
               noouti<span className="danger">dev</span>
             </h2>
           </div>
-          <div className="close" id="close-btn">
+          <div className="hidden" id="close-btn">
             <span className="material-icons-sharp">close</span>
           </div>
         </div>
 
-        <div className="sidebar">
-          <a href="#">
-            <span className="material-icons-sharp">grid_view</span>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="#" className="active">
-            <span className="material-icons-sharp">person_outline </span>
-            <h3>Customers</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">receipt_long</span>
-            <h3>Orders</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">insights</span>
-            <h3>Analytics</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">mail_outline</span>
-            <h3>Massages</h3>
-            <span className="message-count">24+</span>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">inventory</span>
-            <h3>Products</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">report_gmailerrorred</span>
-            <h3>Reports</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">settings</span>
-            <h3>Settings</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">add</span>
-            <h3>Add Product</h3>
-          </a>
-          <a href="#">
-            <span className="material-icons-sharp">logout</span>
-            <h3>Logout</h3>
-          </a>
+        <div className="flex flex-col h-[88vh] relative top-12">
+          {data.map((item: menuItemType) => (
+            <AsideBarItem
+              key={item.title}
+              title={item.title}
+              iconName={item.iconName}
+              messageAccount={item.messageAccount}
+            />
+          ))}
         </div>
       </aside>
     </>

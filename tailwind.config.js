@@ -18,6 +18,7 @@ module.exports = {
       "colorPrimaryVariant": "#111e88",
       "colorDarkVariant": "#677483",
       "colorBackground": "#f6f6f9",
+      "colorTransparent": "transparent",
       //dark variant colors
       "colorBackground_DM": "#181a1e",
       "colorWhite_DM": "#202528",
