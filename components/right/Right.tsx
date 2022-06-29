@@ -4,7 +4,7 @@ import { analyticItemType } from "../../types/types";
 import AnalyticItem from "./AnalyticItem";
 import UpdateItem from "./UpdateItem";
 
-const analyticsData: analyticItemType[] = [
+const analyticsData: analyticItemType[] = [ 
   {
     title: "ONLINE ORDERS",
     status: "success",
