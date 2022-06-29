@@ -2,7 +2,7 @@ import Image from "next/image";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "../../types/types";
 import AnalyticItem from "./AnalyticItem";
-import UpdateItem from "./updateItem";
+import UpdateItem from "./UpdateItem";
 
 const analyticsData: analyticItemType[] = [
   {
