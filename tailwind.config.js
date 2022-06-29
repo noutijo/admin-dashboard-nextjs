@@ -27,12 +27,8 @@ module.exports = {
       "colorLight_DM": "rgba(0, 0, 0, 0.4)",
     },
     extend: {
-      spacing: {
-        'cardBorderRadius': '2rem',
-        '144': '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
       }
     },
   },

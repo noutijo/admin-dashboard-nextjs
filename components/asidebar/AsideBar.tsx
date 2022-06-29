@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import AsideBarItem from "./AsideBarItem";
-import { menuItemType } from "../../types/menuTypes";
+import { menuItemType } from "../../types/types";
 
 let data: menuItemType[] = [
   {

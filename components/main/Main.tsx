@@ -2,6 +2,41 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { cardItemType } from "../../types/types";
+import CardItem from "./CardItem";
+
+const data: cardItemType[] = [
+  {
+    strokeDasharray: 200,
+    strokeDashoffset: -30,
+    bgcolor: "bg-colorPrimary",
+    iconName: "analytics",
+    title: "Total Sales",
+    price: 25.21,
+    percent: 81,
+    time: 24,
+  },
+  {
+    strokeDasharray: 80,
+    strokeDashoffset: 20,
+    bgcolor: "bg-colorDanger",
+    iconName: "bar_chart",
+    title: "Total Expenses",
+    price: 23.95,
+    percent: 62,
+    time: 24,
+  },
+  {
+    strokeDasharray: 110,
+    strokeDashoffset: 35,
+    bgcolor: "bg-colorSuccess",
+    iconName: "stacked_line_chart",
+    title: "Total Incomes",
+    price: 10.84,
+    percent: 44,
+    time: 24,
+  },
+];
 
 const Main: NextPage = () => {
   const [_document, set_document] = useState<Document | null>(null);
@@ -11,77 +46,40 @@ const Main: NextPage = () => {
   }, []);
 
   const addDark = (): void => {
-    _document?.documentElement.classList.add("dar");
+    _document?.documentElement.classList.add("dark");
   };
   //enable darkmode by default
   addDark();
 
   return (
     <>
-      <main>
+      <main className="overflow-x-scroll p-[10px] mt-6">
         <h1>Dashboard</h1>
 
-        <div className="date">
-          <input type="date" />
+        <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-sm mt-4 p-[0.5rem_1.6rem]">
+          <input
+            className="bg-colorTransparent text-colorDark dark:text-colorDark_DM"
+            type="date"
+          />
         </div>
 
-        <div className="insights">
-          <div className="sales">
-            <span className="material-icons-sharp">analytics</span>
-            <div className="middle">
-              <div className="left">
-                <h3>Total Sales</h3>
-                <h1>$25,210</h1>
-              </div>
-              <div className="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div className="number">
-                  <p>81%</p>
-                </div>
-              </div>
-            </div>
-            <small className="text-muted">Last 24 Hours</small>
-          </div>
-          <div className="expenses">
-            <span className="material-icons-sharp">bar_chart</span>
-            <div className="middle">
-              <div className="left">
-                <h3>Total Expenses</h3>
-                <h1>$14</h1>
-              </div>
-              <div className="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div className="number">
-                  <p>62%</p>
-                </div>
-              </div>
-            </div>
-            <small className="text-muted">Last 24 Hours</small>
-          </div>
-          <div className="income">
-            <span className="material-icons-sharp">stacked_line_chart</span>
-            <div className="middle">
-              <div className="left">
-                <h3>Total Incomes</h3>
-                <h1>$10,84</h1>
-              </div>
-              <div className="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-                <div className="number">
-                  <p>44%</p>
-                </div>
-              </div>
-            </div>
-            <small className="text-muted">Last 24 Hours</small>
-          </div>
+        <div className="grid grid-cols-3 gap-6 ">
+          {data.map((item: cardItemType) => (
+            <CardItem
+              key={item.title}
+              strokeDasharray={item.strokeDasharray}
+              strokeDashoffset={item.strokeDashoffset}
+              bgcolor={item.bgcolor}
+              iconName={item.iconName}
+              title={item.title}
+              price={item.price}
+              time={item.time}
+              percent={item.percent}
+            />
+          ))}
         </div>
-        <div className="recent-orders">
+
+        <div className="mt-8">
           <h2>Recent Orders</h2>
           <table>
             <thead>
