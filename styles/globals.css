@@ -100,6 +100,10 @@
     @apply appearance-none outline-none box-border;
   }
 
+  table {
+    width: 100%;
+    padding: 0 50px 0 50px;
+  }
 }
 
 /*compoments settings*/
@@ -134,9 +138,10 @@
     @apply ml-0 text-colorPrimary bg-colorTransparent before:content-[''] w-[6px] h-full bg-colorPrimary;
   }
 
- .activeToggle{
-  @apply bg-colorPrimary text-colorWhite rounded-md
- }
+  .activeToggle {
+    @apply bg-colorPrimary text-colorWhite rounded-md
+  }
+
   /*main*/
 
 }

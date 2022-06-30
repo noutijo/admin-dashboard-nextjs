@@ -78,7 +78,7 @@ const Main = () => {
   }, []);
 
   const addDark = (): void => {
-    _document?.documentElement.classList.add("dark");
+    _document?.documentElement.classList.add("dar");
   };
   //enable darkmode by default
   addDark();
@@ -113,7 +113,7 @@ const Main = () => {
 
         <div className="mt-8">
           <h2 className="mb-3">Recent Orders</h2>
-          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full rounded-3xl p-[3rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
+          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
                 <th>Product Name</th>
