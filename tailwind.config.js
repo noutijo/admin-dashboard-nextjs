@@ -26,9 +26,22 @@ module.exports = {
       "colorDarkVariant_DM": "#a3bdCC",
       "colorLight_DM": "rgba(0, 0, 0, 0.4)",
     },
+    screens: {
+      'sm': '0px',
+      'md': '1024px',
+      'lg': '1280px',
+      'xl': '1536px',
+      '2xl': '1920px',
+    },
     extend: {
-      boxShadow: {
-        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      keyframes: {
+        smmenu: {
+          'from': { left: '-100%' },
+          'to': { left: '0%' },
+        }
+      },
+      animation: {
+        'showmenu': 'smmenu 400ms ease forwards',
       }
     },
   },

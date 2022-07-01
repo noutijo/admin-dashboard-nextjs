@@ -58,10 +58,10 @@ const data: updateItemType[] = [
 const Right = () => {
   return (
     <>
-      <div className="mt-6">
-        <div className="flex justify-center gap-8">
-          <button className="lg:hidden" id="menu-btn">
-            <span className="material-icons-sharp">menu</span>
+      <div className="sm:mt-2 md:mt-6 sm:w-[94%] sm:m-[0_auto_4rem]">
+        <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-center sm:text-right items-center sm:gap-8 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
+          <button className="sm:block md:hidden cursor-pointer" id="menu-btn">
+            <span className="material-icons-sharp flex items-center justify-center">menu</span>
           </button>
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
             <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center activeToggle">
@@ -72,7 +72,7 @@ const Right = () => {
             </span>
           </div>
           <div className="flex  gap-8 text-right">
-            <div className="info">
+            <div className="info md:block sm:hidden">
               <p>
                 Hey, <b>Oreol Noumodong</b>
               </p>
@@ -121,7 +121,7 @@ const Right = () => {
             />
           ))}
 
-          <div className="item bg-colorTransparent hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed flex items-center justify-center">
+          <div className="item bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed flex items-center justify-center">
             <div className="flex items-center justify-center w-full h-full gap-3 cursor-pointer">
               <span className="material-icons-sharp">add</span>
               <h3 className="font-bold">Add Product</h3>

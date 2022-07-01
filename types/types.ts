@@ -6,7 +6,7 @@ export type menuItemType = {
 
 export type cardItemType = {
     strokeDasharray: number,
-    strokeDashoffset: number,
+    strokeDashoffset?: number,
     bgcolor: string,
     iconName: string,
     title: string,

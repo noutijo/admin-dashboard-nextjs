@@ -50,15 +50,15 @@ let data: menuItemType[] = [
 const AsideBar: NextPage = () => {
   return (
     <>
-      <aside className="h-screen">
+      <aside className="h-screen sm:fixed md:relative sm:left-[-00%] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden animate-showmenu sm:hidden md:block">
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center gap-3">
             <Image src="/images/logo.png" alt="logo" width={45} height={30} />
-            <h2 className="hidden lg:block ">
+            <h2 className=" sm:block md:hidden lg:block ">
               noouti<span className="danger">dev</span>
             </h2>
           </div>
-          <div className="hidden" id="close-btn">
+          <div className="sm:block md:hidden" id="close-btn">
             <span className="material-icons-sharp">close</span>
           </div>
         </div>

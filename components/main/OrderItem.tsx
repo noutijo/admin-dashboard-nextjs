@@ -9,7 +9,7 @@ const OrderItem = ({
   return (
     <>
       <tr>
-        <td className="h-[2.8rem] border-solid border-b-colorLight dark:border-b-colorLight_DM borber-b-[1px] text-colorDarkVariant">
+        <td className="h-[2.8rem] border-solid border-b-colorLight dark:border-b-colorLight_DM borber-b-[1px] text-colorDarkVariant sm:last:hidden sm:first:hidden lg:last:block lg:first:block">
           {productName}
         </td>
         <td className="h-[2.8rem] border-solid border-b-colorLight dark:border-colorLight_DM borber-b-[1px] text-colorDarkVariant">

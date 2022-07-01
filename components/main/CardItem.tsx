@@ -12,7 +12,7 @@ const CardItem = ({
 }: cardItemType) => {
   return (
     <>
-      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7">
+      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7 overflow-hidden">
         <span
           className={`material-icons-sharp p-2 rounded-full text-colorWhite text-[2rem] ${bgcolor}`}>
           {iconName}
@@ -20,7 +20,7 @@ const CardItem = ({
         <div className="flex items-center justify-between">
           <div className="left">
             <h3 className="text-sm m-[1rem_0_0.6rem]">{title}</h3>
-            <h1>${price}</h1>
+            <h2 className="font-bold">${price}</h2>
           </div>
           <div className="relative w-[80px] h-[80px] rounded-full">
             <svg className="w-[80px] h-[80px]">

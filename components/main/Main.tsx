@@ -39,18 +39,18 @@ const orders: orderType[] = [
 
 const data: cardItemType[] = [
   {
-    strokeDasharray: 200,
-    strokeDashoffset: -30,
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (97 / 100) * 188.6,
     bgcolor: "bg-colorPrimary",
     iconName: "analytics",
     title: "Total Sales",
     price: 25.21,
-    percent: 81,
-    time: 24,
+    percent: 97,
+    time: 2,
   },
   {
-    strokeDasharray: 80,
-    strokeDashoffset: 20,
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (62 / 100) * 188.6,
     bgcolor: "bg-colorDanger",
     iconName: "bar_chart",
     title: "Total Expenses",
@@ -59,14 +59,14 @@ const data: cardItemType[] = [
     time: 24,
   },
   {
-    strokeDasharray: 110,
-    strokeDashoffset: 35,
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (50 / 100) * 188.6,
     bgcolor: "bg-colorSuccess",
     iconName: "stacked_line_chart",
     title: "Total Incomes",
     price: 10.84,
     percent: 44,
-    time: 24,
+    time: 11,
   },
 ];
 
@@ -78,14 +78,14 @@ const Main = () => {
   }, []);
 
   const addDark = (): void => {
-    _document?.documentElement.classList.add("dar");
+    _document?.documentElement.classList.add("dark");
   };
   //enable darkmode by default
   addDark();
 
   return (
     <>
-      <main className="overflow-x-scroll p-[10px] mt-6">
+      <main className="overflow-x-scroll sm:mt-[8rem] sm:p-[0_1rem]  md:p-[10px] md:mt-6">
         <h1>Dashboard</h1>
 
         <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-sm mt-4 p-[0.5rem_1.6rem]">
@@ -95,7 +95,7 @@ const Main = () => {
           />
         </div>
 
-        <div className="grid grid-cols-3 gap-6 ">
+        <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
           {data.map((item: cardItemType) => (
             <CardItem
               key={item.title}
@@ -116,7 +116,9 @@ const Main = () => {
           <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
-                <th>Product Name</th>
+                <th className="sm:last:hidden sm:first:hidden lg:last:block lg:first:block">
+                  Product Name
+                </th>
                 <th>Product Number</th>
                 <th>Payment</th>
                 <th>Status</th>
@@ -135,7 +137,11 @@ const Main = () => {
               ))}
             </tbody>
           </table>
-          <a className="text-center block m-[1rem_auto] text-colorPrimary" href="#">Show All</a>
+          <a
+            className="text-center block m-[1rem_auto] text-colorPrimary"
+            href="#">
+            Show All
+          </a>
         </div>
       </main>
     </>
