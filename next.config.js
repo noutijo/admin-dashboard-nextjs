@@ -7,6 +7,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ["cdn6.f-cdn.com", "images.pexels.com","pbs.twimg.com"],
+    domains: ["cdn6.f-cdn.com", "images.pexels.com", "image-uviadeo.journaldunet.com"],
   },
 }

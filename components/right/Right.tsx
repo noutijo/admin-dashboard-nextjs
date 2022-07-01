@@ -61,7 +61,9 @@ const Right = () => {
       <div className="sm:mt-2 md:mt-6 sm:w-[94%] sm:m-[0_auto_4rem]">
         <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-center sm:text-right items-center sm:gap-8 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
           <button className="sm:block md:hidden cursor-pointer" id="menu-btn">
-            <span className="material-icons-sharp flex items-center justify-center">menu</span>
+            <span className="material-icons-sharp flex items-center justify-center">
+              menu
+            </span>
           </button>
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
             <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center activeToggle">
@@ -80,7 +82,7 @@ const Right = () => {
             </div>
             <div className="profile-photo">
               <Image
-                src="https://pbs.twimg.com/profile_images/1514681845304242184/FtI21TMl_400x400.jpg"
+                src="https://image-uviadeo.journaldunet.com/image/140/1739995192/323460.jpg"
                 alt="Noumodong picture"
                 width={400}
                 height={400}
