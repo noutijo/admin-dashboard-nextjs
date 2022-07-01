@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*base settings*/
 @layer base {
 
   html {
@@ -62,7 +61,6 @@
 
 }
 
-/*compoments settings*/
 @layer components {
 
   .text-muted {
@@ -97,34 +95,14 @@
   .activeToggle {
     @apply bg-colorPrimary text-colorWhite rounded-md
   }
-
-  /*main*/
-
 }
-
-/*------ media queries small laptop ---------------*/
-@media screen and (max-width:1200px) {
-
-  tabl thead tr th:last-child, mai table thead tr th:first-child {
-    display: none;
-  }
-
-  tabl tbody tr td:last-child, mai table tbody tr td:first-child {
-    display: none;
-  }
-}
-
-/*------ media queries small tablets and mobiles ---------------*/
 @media screen and (min-width:7px) {
-
 
   .right .top .theme-toggler {
     width: 4.4rem;
     position: absolute;
     left: 66%;
   }
-
-  
 
   .right .top button {
     display: inline-block;

@@ -12,6 +12,7 @@
 /.next/
 /out/
 /.history/
+/
 
 # production
 /build
