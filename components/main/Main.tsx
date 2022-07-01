@@ -60,7 +60,7 @@ const data: cardItemType[] = [
   },
   {
     strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (50 / 100) * 188.6,
+    strokeDashoffset: 188.6 - (44 / 100) * 188.6,
     bgcolor: "bg-colorSuccess",
     iconName: "stacked_line_chart",
     title: "Total Incomes",
