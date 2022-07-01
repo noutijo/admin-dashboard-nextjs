@@ -116,13 +116,13 @@ const Main = () => {
           <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
-                <th className="sm:last:hidden sm:first:hidden lg:last:block lg:first:block">
+                <th className="sm:hidden lg:block">
                   Product Name
                 </th>
                 <th>Product Number</th>
                 <th>Payment</th>
                 <th>Status</th>
-                <th></th>
+                <th className="sm:hidden lg:block"></th>
               </tr>
             </thead>
             <tbody>
