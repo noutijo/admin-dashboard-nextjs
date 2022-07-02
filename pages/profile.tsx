@@ -1,19 +1,26 @@
 import { wrapper } from "app/store";
-import { selectProfile, setProfileData } from "app/store/slices/profile";
+import { selectProfile } from "app/store/slices/profile";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 function Profile(props: any) {
   const profile = useSelector(selectProfile);
 
   return (
     <>
-    <div className="mt-8">
-      <h2>This is the profile.</h2>
-      <div>{props.resolvedUrl}</div>
-      <div>{profile.name}</div>
-      <Link href="/initstore">Go to Home</Link>
-    </div>
+      <Head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 -Page Not Found</title>
+      </Head>
+
+      <div className="mt-8">
+        <h2>This is the profile.</h2>
+        <div>{props.resolvedUrl}</div>
+        <div>{profile.name}</div>
+        <Link href="/initstore">Go to Home</Link>
+      </div>
     </>
   );
 }
@@ -21,7 +28,6 @@ function Profile(props: any) {
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
     async ({ resolvedUrl }) => {
-    
       return {
         props: {
           resolvedUrl,
