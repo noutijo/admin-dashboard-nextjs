@@ -4,7 +4,7 @@ import { AppState } from "app/store";
 const menuSlice = createSlice({
   name: "menu",
   initialState: {
-    isopen: true,
+    isopen: false,
   },
   reducers: {
     setMenuStatus: (state, action) => {

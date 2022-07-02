@@ -1,7 +1,7 @@
-import { getMenuStatus, setMenuStatus } from "app/store/slices/menuSlice";
+import { setMenuStatus } from "app/store/slices/menuSlice";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "../../types/types";
 import AnalyticItem from "./AnalyticItem";
@@ -60,9 +60,7 @@ const data: updateItemType[] = [
 ];
 
 const Right = () => {
-const { isopen } = useSelector(getMenuStatus);
-const dispatch = useDispatch();
-
+  const dispatch = useDispatch();
   const [currentTheme, setCurrentTheme] = useState<string>("");
 
   useEffect(() => {
