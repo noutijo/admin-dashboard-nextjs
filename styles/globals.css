@@ -93,7 +93,7 @@
   }
 
   .activeToggle {
-    @apply bg-colorPrimary text-colorWhite rounded-md
+    @apply bg-colorPrimary text-colorWhite rounded-md transition-all duration-300 ease-in
   }
 }
 

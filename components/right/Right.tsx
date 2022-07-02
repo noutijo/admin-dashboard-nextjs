@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "../../types/types";
-import AnalyticItem from "./AnalyticItem"; 
+import AnalyticItem from "./AnalyticItem";
 import UpdateItem from "./UpdateItem";
 
 const analyticsData: analyticItemType[] = [
@@ -14,7 +15,7 @@ const analyticsData: analyticItemType[] = [
     time: "21 hours",
     bgicon: "bg-colorPrimary",
   },
-  
+
   {
     title: "OFFLINE ORDERS",
     status: "danger",
@@ -57,16 +58,61 @@ const data: updateItemType[] = [
 ];
 
 const Right = () => {
+  // const [_document, set_document] = useState<Document | null>(null);
+
+  // useEffect(() => {
+  //   set_document(document);
+  // }, []);
+
+  // const addDark = (): void => {
+  //   _document?.documentElement.classList.add("dark");
+  // };
+  // addDark();
+
+  const [currentTheme, setCurrentTheme] = useState<string>("");
+
+  useEffect(() => {
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme && localStorage.theme === "dark") {
+      setCurrentTheme("dark");
+    } else {
+      setCurrentTheme("light");
+    }
+  });
+
+  const setDarkMode = () => {
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+
+    setCurrentTheme("dark");
+    localStorage.theme = "dark";
+  };
+
+  const setLightkMode = () => {
+    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
+    setCurrentTheme("light");
+    localStorage.theme = "light";
+  };
+
   return (
     <>
       <div className="sm:mt-2 md:mt-6 sm:w-[94%] sm:m-[0_auto_4rem]">
-        <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-center sm:text-right items-center sm:gap-8 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
-          <button className="sm:block md:hidde cursor-pointer" id="menu-btn">
+        <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-end sm:text-right items-center sm:gap-4 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
+          <button className="sm:block md:hidden cursor-pointer">
             <i className="bi-list text-2xl flex items-center justify-center"></i>
           </button>
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
-            <i className="bi bi-brightness-high-fill text-sm w-1/2 h-full flex items-center justify-center"></i>
-            <i className="bi bi-moon-fill text-sm w-1/2 h-full flex items-center justify-center activeToggle"></i>
+            <i
+              className={`bi bi-brightness-high-fill text-sm w-1/2 h-full flex items-center justify-center ${
+                currentTheme === "light" ? "activeToggle" : ""
+              }`}
+              onClick={setLightkMode}></i>
+            <i
+              className={`bi bi-moon-fill text-sm w-1/2 h-full flex items-center justify-center ${
+                currentTheme === "dark" ? "activeToggle" : ""
+              }`}
+              onClick={setDarkMode}></i>
           </div>
           <div className="flex  gap-8 text-right">
             <div className="info md:block sm:hidden">
