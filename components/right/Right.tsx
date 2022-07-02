@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "../../types/types";
-import AnalyticItem from "./AnalyticItem";
+import AnalyticItem from "./AnalyticItem"; 
 import UpdateItem from "./UpdateItem";
 
 const analyticsData: analyticItemType[] = [ 
@@ -123,7 +123,7 @@ const Right = () => {
             />
           ))}
 
-          <div className="item bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed flex items-center justify-center">
+          <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary flex items-center justify-center">
             <div className="flex items-center justify-center w-full h-full gap-3 cursor-pointer">
               <span className="material-icons-sharp">add</span>
               <h3 className="font-bold">Add Product</h3>
