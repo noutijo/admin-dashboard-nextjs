@@ -43,7 +43,7 @@ module.exports = {
       animation: {
         'showmenu': 'smmenu 400ms ease forwards',
       }
-    },
+    }
   },
   plugins: [],
 }

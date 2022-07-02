@@ -113,7 +113,7 @@ const Main = () => {
 
         <div className="mt-8">
           <h2 className="mb-3">Recent Orders</h2>
-          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
+          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate table-auto rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
                 <th className="sm:hidden lg:block">

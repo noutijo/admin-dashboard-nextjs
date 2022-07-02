@@ -43,13 +43,13 @@ const data: updateItemType[] = [
   },
   {
     name: "Pricilia Ken",
-    src: "https://images.pexels.com/photos/3760918/pexels-photo-3760918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    src: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     message: "received his order of Iphone 14 Pro Max",
     time: "3 minutes",
   },
   {
-    name: "Kenfack Léa",
-    src: "https://images.pexels.com/photos/7193070/pexels-photo-7193070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    name: "Edouard Betsem",
+    src: "https://media-exp1.licdn.com/dms/image/C4D03AQGQs2GcMMnhug/profile-displayphoto-shrink_200_200/0/1639051210992?e=1661990400&v=beta&t=GqpfiB_anMpbCHUTlRrMmDY2IfCAqZKJFostITDhU6c",
     message: "received his order of nooutidev T-shirt",
     time: "4 minutes",
   },
