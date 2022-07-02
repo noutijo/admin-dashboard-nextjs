@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { analyticItemType } from "../../types/types";
 
 const AnalyticItem = ({

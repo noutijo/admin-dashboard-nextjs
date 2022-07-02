@@ -1,7 +1,5 @@
 import Head from "next/head";
-import AsideBar from "../components/asidebar/AsideBar";
 import Middle from "../components/middle/Middle";
-import Right from "../components/right/Right";
 
 const Home= () => {
   return (

@@ -4,8 +4,6 @@ import type { AppProps } from 'next/app';
 import { wrapper } from 'app/store';
 import Layout from 'components/layout/Layout';
 
-
-
 function MyApp({ Component, pageProps }: AppProps) {
   return  (
    <Layout>

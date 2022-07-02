@@ -58,21 +58,9 @@ const data: updateItemType[] = [
 ];
 
 const Right = () => {
-  // const [_document, set_document] = useState<Document | null>(null);
-
-  // useEffect(() => {
-  //   set_document(document);
-  // }, []);
-
-  // const addDark = (): void => {
-  //   _document?.documentElement.classList.add("dark");
-  // };
-  // addDark();
-
   const [currentTheme, setCurrentTheme] = useState<string>("");
 
   useEffect(() => {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (localStorage.theme && localStorage.theme === "dark") {
       setCurrentTheme("dark");
     } else {
@@ -80,19 +68,14 @@ const Right = () => {
     }
   });
 
-  const setDarkMode = () => {
-    document.documentElement.classList.add("dark");
-    document.documentElement.classList.remove("light");
+  const setTheme = (theme: string) => {
+    document.documentElement.classList.add(`${theme}`);
+    document.documentElement.classList.remove(
+      `${theme === "dark" ? "light" : "dark"}`
+    );
 
-    setCurrentTheme("dark");
-    localStorage.theme = "dark";
-  };
-
-  const setLightkMode = () => {
-    document.documentElement.classList.add("light");
-    document.documentElement.classList.remove("dark");
-    setCurrentTheme("light");
-    localStorage.theme = "light";
+    setCurrentTheme(`${theme}`);
+    localStorage.theme = `${theme}`;
   };
 
   return (
@@ -107,12 +90,16 @@ const Right = () => {
               className={`bi bi-brightness-high-fill text-sm w-1/2 h-full flex items-center justify-center ${
                 currentTheme === "light" ? "activeToggle" : ""
               }`}
-              onClick={setLightkMode}></i>
+              onClick={() => {
+                setTheme("light");
+              }}></i>
             <i
               className={`bi bi-moon-fill text-sm w-1/2 h-full flex items-center justify-center ${
                 currentTheme === "dark" ? "activeToggle" : ""
               }`}
-              onClick={setDarkMode}></i>
+              onClick={() => {
+                setTheme("dark");
+              }}></i>
           </div>
           <div className="flex  gap-8 text-right">
             <div className="info md:block sm:hidden">

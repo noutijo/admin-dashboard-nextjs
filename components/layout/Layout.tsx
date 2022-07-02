@@ -1,9 +1,5 @@
-import Head from "next/head";
-import { ReactElement } from "react";
 import AsideBar from "../../components/asidebar/AsideBar";
-import Middle from "../../components/middle/Middle";
 import Right from "../../components/right/Right";
-
 interface LayoutProps {
   children: React.ReactNode;
 }
