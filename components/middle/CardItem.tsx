@@ -13,10 +13,8 @@ const CardItem = ({
   return (
     <>
       <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7 overflow-auto">
-        <span
-          className={`material-icons-sharp p-2 rounded-full text-colorWhite text-[2rem] ${bgcolor}`}>
-          {iconName}
-        </span>
+        <i
+          className={`${iconName} flex justify-center items-center p-2 h-12 w-12 rounded-full text-colorWhite text-2xl ${bgcolor}`}></i>
         <div className="flex items-center justify-between">
           <div className="left">
             <h3 className="text-sm m-[1rem_0_0.6rem]">{title}</h3>

@@ -15,7 +15,7 @@ const AnalyticItem = ({
       <div className="flex items-center gap-4 mb-[0.7rem] bg-colorWhite dark:bg-colorWhite_DM p-6 rounded-3xl shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease-out">
         <div
           className={`p-[0.6rem] text-colorWhite rounded-full flex items-center ${bgicon}`}>
-          <span className="material-icons-sharp">{iconName}</span>
+          <i className={`bi text-xl flex items-center justify-center ${iconName}`}></i>
         </div>
         <div className="flex justify-between items-start m-0 w-full">
           <div className="info">

@@ -18,7 +18,10 @@ const Home = () => {
                         </a>
                     </p>
                     <p className="mt-2 text-sm text-center">
-                        <a className="flex items-center justify-center gap-1 text-colorPrimary" href="https://oreolnoumodong.com" target="_blank" rel="noopener noreferrer"><span className="material-icons-sharp flex items-center justify-center">link</span> www.oreolnoumodong.com</a>
+                        <a className="flex items-center justify-center gap-1 text-colorPrimary" href="https://oreolnoumodong.com" target="_blank" rel="noopener noreferrer">
+                            <i className="bi bi-link flex items-center justify-center"></i>
+
+                            www.oreolnoumodong.com</a>
                     </p>
                 </div>
 

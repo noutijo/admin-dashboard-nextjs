@@ -4,20 +4,21 @@ import { analyticItemType } from "../../types/types";
 import AnalyticItem from "./AnalyticItem"; 
 import UpdateItem from "./UpdateItem";
 
-const analyticsData: analyticItemType[] = [ 
+const analyticsData: analyticItemType[] = [
   {
     title: "ONLINE ORDERS",
     status: "success",
-    iconName: "shopping_cart",
+    iconName: "bi-cart-fill",
     price: 3282,
     percent: +32,
     time: "21 hours",
     bgicon: "bg-colorPrimary",
   },
+  
   {
     title: "OFFLINE ORDERS",
     status: "danger",
-    iconName: "local_mall",
+    iconName: "bi-bag-fill",
     price: 1000,
     percent: -12,
     time: "23 hours",
@@ -26,7 +27,7 @@ const analyticsData: analyticItemType[] = [
   {
     title: "NEW CUSTOMERS",
     status: "success",
-    iconName: "person",
+    iconName: "bi-person-fill",
     price: 998,
     percent: +25,
     time: "3 hours",
@@ -66,12 +67,8 @@ const Right = () => {
             </span>
           </button>
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
-            <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center activeToggle">
-              light_mode
-            </span>
-            <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center">
-              dark_mode
-            </span>
+            <i className="bi bi-brightness-high-fill text-sm w-1/2 h-full flex items-center justify-center"></i>
+            <i className="bi bi-moon-fill text-sm w-1/2 h-full flex items-center justify-center activeToggle"></i>
           </div>
           <div className="flex  gap-8 text-right">
             <div className="info md:block sm:hidden">
@@ -125,7 +122,7 @@ const Right = () => {
 
           <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary transition duration-300 ease-out flex items-center justify-center">
             <div className="flex items-center justify-center w-full h-full gap-3 cursor-pointer">
-              <span className="material-icons-sharp">add</span>
+              <i className="bi-plus textxl font-bold"></i>
               <h3 className="font-bold">Add Product</h3>
             </div>
           </div>
