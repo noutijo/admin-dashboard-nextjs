@@ -65,11 +65,11 @@ const Right = () => {
               menu
             </span>
           </button>
-          <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-8 w-16 cursor-pointer rounded-md">
-            <span className="material-icons-sharp text-[1rem] text-xl w-1/2 h-full flex items-center justify-center activeToggle">
+          <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
+            <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center activeToggle">
               light_mode
             </span>
-            <span className="material-icons-sharp text-[1rem] overflow-hidden text-xl w-1/2 h-full flex items-center justify-center">
+            <span className="material-icons-sharp text-xl w-1/2 h-full flex items-center justify-center">
               dark_mode
             </span>
           </div>
