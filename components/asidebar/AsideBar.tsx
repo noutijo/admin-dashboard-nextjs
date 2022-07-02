@@ -7,43 +7,53 @@ import { useEffect, useState } from "react";
 let data: menuItemType[] = [
   {
     title: `Dashboard`,
+    url:"/",
     iconName: `grid_view`,
   },
   {
     title: `Customers`,
+    url:"/customers",
     iconName: `person_outline`,
   },
   {
     title: `Orders`,
+    url:"/orders",
     iconName: `receipt_long`,
   },
   {
     title: `Analytics`,
+    url:"/analystics",
     iconName: `insights`,
   },
   {
     title: `Messages`,
+    url:"/messages",
     iconName: `mail_outline`,
     messageAccount: 23,
   },
   {
     title: `Products`,
+    url:"/products",
     iconName: `inventory`,
   },
   {
     title: `Reports`,
+    url:"/reports",
     iconName: `report_gmailerrorred`,
   },
   {
     title: `Settings`,
+    url:"/settings",
     iconName: `settings`,
   },
   {
     title: `Add Product`,
+    url:"/add_product",
     iconName: `add`,
   },
   {
     title: `Logout`,
+    url:"/logout",
     iconName: `logout`,
   },
 ];
@@ -82,6 +92,7 @@ const AsideBar: NextPage = () => {
               key={item.title}
               title={item.title}
               iconName={item.iconName}
+              url={item.url}
               messageAccount={item.messageAccount}
             />
           ))}
