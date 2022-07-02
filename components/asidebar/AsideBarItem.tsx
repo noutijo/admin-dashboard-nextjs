@@ -5,7 +5,7 @@ const AsideBarItem = ({ title, iconName, messageAccount }: menuItemType) => {
     <>
       <a
         className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-all ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
-          title === "Messages" ? "activeMenu" : "text-colorInfoDark"
+          title === "Dashboard" ? "activeMenu" : "text-colorInfoDark"
         }`}
         href="#">
         <span className="material-icons-sharp">{iconName}</span>

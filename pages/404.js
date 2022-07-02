@@ -9,7 +9,7 @@ const Home = () => {
                 <title>404 -Page Not Found</title>
             </Head>
 
-            <div className="h-screen w-screen flex items-center justify-center bg-colorBackground_DM text-colorWhite">
+            <div className="h-screen w-full flex items-center justify-center bg-colorBackground_DM text-colorWhite">
                 <div>
                     <p className="text-3xl text-center">404 mate!</p>
                     <p className="mt-2 text-sm text-center"> <span>Follow me on Twitter:</span> <a className="text-colorPrimary" href="https://twitter.com/JuniorOreol" target="_blank" rel="noopener noreferrer">@JuniorOreol</a> </p>

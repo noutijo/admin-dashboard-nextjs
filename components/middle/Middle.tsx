@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { cardItemType } from "../../types/types";
 import { orderType } from "../../types/types";
 import CardItem from "./CardItem";
@@ -71,17 +70,6 @@ const data: cardItemType[] = [
 ];
 
 const Main = () => {
-  const [_document, set_document] = useState<Document | null>(null);
-
-  useEffect(() => {
-    set_document(document);
-  }, []);
-
-  const addDark = (): void => {
-    _document?.documentElement.classList.add("dark");
-  };
-  //enable darkmode by default
-  addDark();
 
   return (
     <>

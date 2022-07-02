@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import AsideBarItem from "./AsideBarItem";
 import { menuItemType } from "../../types/types";
+import { useEffect, useState } from "react";
 
 let data: menuItemType[] = [
   {
@@ -48,6 +49,18 @@ let data: menuItemType[] = [
 ];
 
 const AsideBar: NextPage = () => {
+    const [_document, set_document] = useState<Document | null>(null);
+
+    useEffect(() => {
+      set_document(document);
+    }, []);
+
+    const addDark = (): void => {
+      _document?.documentElement.classList.add("dark");
+    };
+    //enable darkmode by default
+    addDark();
+
   return (
     <>
       <aside className="h-screen sm:fixed md:relative sm:left-[-00%] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden animate-showmenu sm:hidden md:block">
