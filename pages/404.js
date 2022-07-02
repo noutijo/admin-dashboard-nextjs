@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 
 const Home = () => {
     return (
@@ -21,7 +20,6 @@ const Home = () => {
                     <p className="mt-2 text-sm text-center">
                         <a className="flex items-center justify-center gap-1 text-colorPrimary" href="https://oreolnoumodong.com" target="_blank" rel="noopener noreferrer"><span className="material-icons-sharp flex items-center justify-center">link</span> www.oreolnoumodong.com</a>
                     </p>
-                    <Link href="/profile">Go to Profile</Link>
                 </div>
 
             </div>
