@@ -73,7 +73,7 @@ const Main = () => {
 
   return (
     <>
-      <main className="overflow-x-scroll sm:p-[0_1rem]  md:p-[10px] md:mt-6">
+      <main className="overflow-x-scroll sm:mt-[1rem] sm:p-[0_1rem]  md:p-[10px] md:mt-6">
         <h1>Dashboard</h1>
 
         <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-sm mt-4 p-[0.5rem_1.6rem]">
