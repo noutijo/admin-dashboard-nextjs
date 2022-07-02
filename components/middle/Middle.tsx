@@ -79,13 +79,12 @@ const Main = () => {
           <label>Choose date: </label>
           <input
             type="date"
-            value="2018-07-22"
-            min="2018-01-01"
-            max="2018-12-31"
+            value="2019-07-22"
+            min="1900-01-01"
+            max="2100-01-01"
             className="bg-colorTransparent"
           />
         </div>
-
         <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
           {data.map((item: cardItemType) => (
             <CardItem
