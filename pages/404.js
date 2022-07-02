@@ -19,9 +19,9 @@ const Home = () => {
                     </p>
                     <p className="mt-2 text-sm text-center">
                         <a className="flex items-center justify-center gap-1 text-colorPrimary" href="https://oreolnoumodong.com" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-link flex items-center justify-center"></i>
-
-                            www.oreolnoumodong.com</a>
+                            <i className="bi bi-link text-xl flex items-center justify-center"></i>
+                            <span>www.oreolnoumodong.com</span>
+                        </a>
                     </p>
                 </div>
 
