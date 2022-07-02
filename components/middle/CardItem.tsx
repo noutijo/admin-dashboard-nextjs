@@ -12,7 +12,7 @@ const CardItem = ({
 }: cardItemType) => {
   return (
     <>
-      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7 overflow-hidden">
+      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-colorWhite dark:shadow-colorWhite_DM hover:shadow-none p-7 overflow-auto">
         <span
           className={`material-icons-sharp p-2 rounded-full text-colorWhite text-[2rem] ${bgcolor}`}>
           {iconName}
