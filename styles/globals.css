@@ -5,7 +5,7 @@
 @layer base {
 
   html {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   a {
@@ -89,13 +89,14 @@
 
   /*aside bar menu*/
   .activeMenu {
-    @apply text-colorPrimary bg-colorTransparent  before:content-[''] before:w-[6px] before:h-full before:bg-colorPrimary;
+    @apply text-colorPrimary bg-colorTransparent before:content-[''] before:w-[6px] before:h-full before:bg-colorPrimary;
   }
 
   .activeToggle {
     @apply bg-colorPrimary text-colorWhite rounded-md
   }
 }
+
 @media screen and (min-width:7px) {
 
   .right .top .theme-toggler {
