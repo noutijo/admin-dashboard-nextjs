@@ -59,6 +59,10 @@
     @apply appearance-none outline-none box-border;
   }
 
+  input{
+   -webkit-appearance: none;
+}
+
 }
 
 @layer components {

@@ -70,16 +70,19 @@ const data: cardItemType[] = [
 ];
 
 const Main = () => {
-
   return (
     <>
       <main className="overflow-x-scroll sm:p-[0_1rem]  md:p-[10px] md:mt-6">
         <h1>Dashboard</h1>
 
-        <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-sm mt-4 p-[0.5rem_1.6rem]">
+        <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-lg mt-4 p-[0.5rem_1.6rem]">
+          <label>Choose date: </label>
           <input
-            className="bg-colorTransparent text-colorDark dark:text-colorDark_DM"
             type="date"
+            value="2018-07-22"
+            min="2018-01-01"
+            max="2018-12-31"
+            className="bg-colorTransparent"
           />
         </div>
 
@@ -101,12 +104,10 @@ const Main = () => {
 
         <div className="mt-8">
           <h2 className="mb-3">Recent Orders</h2>
-          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate table-auto rounded-3xl p-[1.5rem] text-center dark:shadow-colorWhite_DM hover:shadow-none transition-all duration-300 ease">
+          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate table-auto rounded-3xl p-[1.5rem] text-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none transition-all duration-300 ease">
             <thead>
               <tr>
-                <th className="sm:hidden lg:block">
-                  Product Name
-                </th>
+                <th className="sm:hidden lg:block">Product Name</th>
                 <th>Product Number</th>
                 <th>Payment</th>
                 <th>Status</th>

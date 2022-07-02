@@ -122,7 +122,7 @@ const Right = () => {
         <div className="mt-4">
           <h2 className="mb-[0.8rem]">Recents Upddates</h2>
 
-          <div className="bg-colorWhite dark:bg-colorWhite_DM p-7 rounded-3xl transition-all duration-300 ease-linear shadow-colorWhite dark:shadow-colorWhite_DM">
+          <div className="bg-colorWhite dark:bg-colorWhite_DM p-7 rounded-3xl transition-all duration-300 ease-linear shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none">
             {data.map((item: updateItemType) => (
               <UpdateItem
                 key={item.name}
@@ -151,9 +151,9 @@ const Right = () => {
             />
           ))}
 
-          <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary transition duration-300 ease-out flex items-center justify-center">
+          <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary transition duration-300 ease-out flex items-center justify-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM dark:hover:ring-colorLight hover:shadow-none">
             <div className="flex items-center justify-center w-full h-full gap-3 cursor-pointer">
-              <i className="bi-plus textxl font-bold"></i>
+              <i className="bi-plus-lg text-xl font-bold"></i>
               <h3 className="font-bold">Add Product</h3>
             </div>
           </div>
