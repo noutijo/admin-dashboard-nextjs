@@ -8,10 +8,12 @@ function Profile(props: any) {
 
   return (
     <>
+    <div className="mt-8">
       <h2>This is the profile.</h2>
       <div>{props.resolvedUrl}</div>
       <div>{profile.name}</div>
       <Link href="/initstore">Go to Home</Link>
+    </div>
     </>
   );
 }

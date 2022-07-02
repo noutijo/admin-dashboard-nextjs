@@ -9,10 +9,12 @@ function Initstore(props:any) {
  
   return (
     <>
-      <h2>This is the profile.</h2>
-      <div>{props.resolvedUrl}</div>
-      <div>{profile.name}</div>
-      <Link href="/profile">Go to Profile</Link>
+      <div className="mt-8">
+        <h2>This is the profile.</h2>
+        <div>{props.resolvedUrl}</div>
+        <div>{profile.name}</div>
+        <Link href="/profile">Go to Profile</Link>
+      </div>
     </>
   );
 }
