@@ -1,5 +1,7 @@
+import { getMenuStatus, setMenuStatus } from "app/store/slices/menuSlice";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "../../types/types";
 import AnalyticItem from "./AnalyticItem";
@@ -58,6 +60,9 @@ const data: updateItemType[] = [
 ];
 
 const Right = () => {
+const { isopen } = useSelector(getMenuStatus);
+const dispatch = useDispatch();
+
   const [currentTheme, setCurrentTheme] = useState<string>("");
 
   useEffect(() => {
@@ -78,11 +83,17 @@ const Right = () => {
     localStorage.theme = `${theme}`;
   };
 
+  const handleDisplayMenu = () => {
+    dispatch(setMenuStatus(""));
+  };
+
   return (
     <>
       <div className="sm:mt-2 md:mt-6 sm:w-[94%] sm:m-[0_auto_4rem]">
         <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-end sm:text-right items-center sm:gap-4 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
-          <button className="sm:block md:hidden cursor-pointer">
+          <button
+            className="sm:block md:hidden cursor-pointer"
+            onClick={handleDisplayMenu}>
             <i className="bi-list text-2xl flex items-center justify-center"></i>
           </button>
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">

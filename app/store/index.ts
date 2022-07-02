@@ -3,10 +3,12 @@ import { createWrapper } from "next-redux-wrapper";
 import { Action } from 'redux';
 
 import ProfileReducer from './slices/profile'
+import menuSlice from './slices/menuSlice'
 
 const makeStore = () => configureStore({
     reducer: {
-        profile: ProfileReducer
+        profile: ProfileReducer,
+        menu: menuSlice
     },
     devTools: true
 });
