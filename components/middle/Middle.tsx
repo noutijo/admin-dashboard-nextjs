@@ -75,6 +75,7 @@ const Main = () => {
         <h1>Dashboard</h1>
 
         <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-lg mt-4 p-[0.5rem_1.6rem]">
+          <label className="pr-1" htmlFor="date">Choose date: </label>
           <input
             type="date"
             defaultValue="2019-07-22"
