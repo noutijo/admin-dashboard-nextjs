@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-
   html {
     font-size: 0.875rem;
   }
@@ -14,7 +12,7 @@
   }
 
   img {
-    @apply block w-full
+    @apply block w-full;
   }
 
   h1 {
@@ -44,7 +42,7 @@
   }
 
   p {
-    @apply text-colorDarkVariant
+    @apply text-colorDarkVariant;
   }
 
   b {
@@ -61,17 +59,15 @@
   }
 
  input[type="date"] { 
-  @apply bg-colorTransparent text-colorDark dark:text-colorInfoDark
+  @apply bg-colorTransparent text-colorDark dark:text-colorInfoDark;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  @apply dark:invert
+  @apply dark:invert;
 }
-
 }
 
 @layer components {
-
   .text-muted {
     @apply text-colorInfoDark;
   }
@@ -102,7 +98,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .activeToggle {
-    @apply bg-colorPrimary text-colorWhite rounded-md transition-all duration-300 ease-in
+    @apply bg-colorPrimary text-colorWhite rounded-md transition-all duration-300 ease-out;
   }
 }
 
