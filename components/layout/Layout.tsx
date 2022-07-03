@@ -1,5 +1,5 @@
-import AsideBar from "../../components/asidebar/AsideBar";
-import Right from "../../components/right/Right";
+import AsideBar from "@components/asidebar/AsideBar";
+import Right from "@components/right/Right";
 interface LayoutProps {
   children: React.ReactNode;
 }

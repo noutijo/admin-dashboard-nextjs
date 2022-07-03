@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { menuItemType } from "../../types/types";
+import { menuItemType } from "@/types/types";
 
 const AsideBarItem = ({
   title,

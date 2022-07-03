@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateItemType } from "../../types/types";
-import { analyticItemType } from "../../types/types";
+import { analyticItemType } from "@/types/types";
 import AnalyticItem from "./AnalyticItem";
 import UpdateItem from "./UpdateItem";
 

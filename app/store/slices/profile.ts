@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
-import { AppState } from "app/store";
+import { AppState } from "@app/store";
 
 
 const profileSlice = createSlice({

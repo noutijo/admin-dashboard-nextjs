@@ -1,5 +1,4 @@
-import { cardItemType } from "../../types/types";
-import { orderType } from "../../types/types";
+import { cardItemType, orderType } from "@/types/types";
 import CardItem from "./CardItem";
 import OrderItem from "./OrderItem";
 
@@ -79,7 +78,7 @@ const Main = () => {
           <label>Choose date: </label>
           <input
             type="date"
-            value="2019-07-22"
+            defaultValue="2019-07-22"
             min="1900-01-01"
             max="2100-01-01"
             className="bg-colorTransparent"

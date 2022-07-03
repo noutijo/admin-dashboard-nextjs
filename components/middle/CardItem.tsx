@@ -1,4 +1,4 @@
-import { cardItemType } from "../../types/types";
+import { cardItemType } from "@/types/types";
 
 const CardItem = ({
   strokeDasharray,

@@ -1,4 +1,4 @@
-import { analyticItemType } from "../../types/types";
+import { analyticItemType } from "@/types/types";
 
 const AnalyticItem = ({
   title,

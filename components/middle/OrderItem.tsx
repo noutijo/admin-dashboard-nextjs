@@ -1,4 +1,4 @@
-import { orderType } from "../../types/types";
+import { orderType } from "@/types/types";
 
 const OrderItem = ({
   productName,

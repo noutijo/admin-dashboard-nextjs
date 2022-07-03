@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import AsideBarItem from "./AsideBarItem";
-import { menuItemType } from "../../types/types";
+import { menuItemType } from "@/types/types";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMenuStatus, setMenuStatus } from "app/store/slices/menuSlice";
+import { getMenuStatus, setMenuStatus } from "@app/store/slices/menuSlice";
 
 let data: menuItemType[] = [
   {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { updateItemType } from "../../types/types";
+import { updateItemType } from "@/types/types";
 
 const UpdateItem = ({ name, src, message, time }: updateItemType) => {
   return (
