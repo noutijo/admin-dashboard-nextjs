@@ -35,13 +35,18 @@ module.exports = {
         "colorLight_DM": "rgba(0, 0, 0, 0.4)",
       },
       keyframes: {
-        smmenu: {
+        showmenu: {
           'from': { left: '-100%' },
           'to': { left: '0%' },
+        },
+        hidemenu: {
+          'from': { left: '0%' },
+          'to': { left: '-100%' },
         }
       },
       animation: {
-        'showmenu': 'smmenu 400ms ease forwards',
+        'showmenu': 'showmenu 400ms ease forwards',
+        'hidemenu': 'hidemenu 400ms ease forwards',
       }
     }
   },
