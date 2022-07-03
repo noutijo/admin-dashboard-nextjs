@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
 
   html {
@@ -59,8 +60,12 @@
     @apply appearance-none outline-none box-border;
   }
 
-  input{
-   -webkit-appearance: none;
+ input[type="date"] { 
+  @apply bg-colorTransparent text-colorDark dark:text-colorInfoDark
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  @apply dark:invert
 }
 
 }
