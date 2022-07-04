@@ -66,7 +66,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 }
 
-
 @layer components {
   .text-muted {
     @apply text-colorInfoDark;
@@ -99,27 +98,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .activeToggle {
     @apply bg-colorPrimary text-colorWhite rounded-md transition-all duration-300 ease-out;
-  }
-}
-
-@media screen and (min-width:7px) {
-
-  .right .top .theme-toggler {
-    width: 4.4rem;
-    position: absolute;
-    left: 66%;
-  }
-
-  .right .top button {
-    display: inline-block;
-    background-color: transparent;
-    cursor: pointer;
-    color: var(--color-dark);
-    position: absolute;
-    left: 1rem;
-  }
-
-  .right .top button span {
-    font-size: 2rem;
   }
 }
