@@ -45,3 +45,4 @@ yarn-error.log*
 /app/store/slices/profile.ts
 /pages/initstore.tsx
 /pages/profile.tsx
+notes.js
