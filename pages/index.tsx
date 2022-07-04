@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Middle from "@components/middle/Middle";
 
-
 const Home= () => {
   return (
     <>

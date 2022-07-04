@@ -42,7 +42,4 @@ yarn-error.log*
 .contentlayer
 
 #redux local test
-/app/store/slices/profile.ts
-/pages/initstore.tsx
-/pages/profile.tsx
-notes.js
+reduxtest.js

@@ -2,13 +2,11 @@ import { configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import { Action } from 'redux';
 
-import ProfileReducer from '@app/store/slices/profile';
 import menuSlice from '@app/store/slices/menuSlice';
 
 const makeStore = () => configureStore({
     reducer: {
-        profile: ProfileReducer,
-        menu: menuSlice
+        menu: menuSlice,
     },
     devTools: true
 });
