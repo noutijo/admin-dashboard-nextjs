@@ -1,9 +1,13 @@
-import { wrapper } from "app/store";
-import { selectProfile } from "app/store/slices/profile";
+import { wrapper } from "@app/store";
+import { selectProfile } from "@app/store/slices/profile";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
+
+//JUST FOR REDUX TEST
+
+
 function Profile(props: any) {
   const profile = useSelector(selectProfile);
 

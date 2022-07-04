@@ -1,9 +1,11 @@
 import { wrapper } from "app/store";
-import { selectProfile, setProfileData } from "app/store/slices/profile";
+import { selectProfile, setProfileData } from "@app/store/slices/profile";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
+
+//JUST FOR REDUX TEST
 
 function Initstore(props: any) {
   const profile = useSelector(selectProfile);
