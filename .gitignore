@@ -40,3 +40,8 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+#redux local test
+/app/store/slices/profile.ts
+/pages/initstore.tsx
+/pages/profile.tsx
