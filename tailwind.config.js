@@ -40,7 +40,7 @@ module.exports = {
         "colorDarkVariant_DM": "#a3bdCC",
         "colorLight_DM": "rgba(0, 0, 0, 0.4)",
       },
-      keyframes: {
+      keyframes: ({ theme }) => ({
         showmenu: {
           'from': { left: '-100%' },
           'to': { left: '0%' },
@@ -48,8 +48,21 @@ module.exports = {
         hidemenu: {
           'from': { left: '0%' },
           'to': { left: '-100%' },
+        },
+        flashlight: {
+          "0%": {
+            background: theme("colors.colorInfoLight"),
+            color: theme("colors.colorPrimary"),
+          },
+          "10%": {
+            background: theme("colors.colorInfoLight /15%"),
+            color: theme("colors.colorPrimary /55%"),
+          },
+          "100%": {
+            background: theme("colors.colorInfoLight / 0%"),
+          },
         }
-      },
+      }),
       animation: {
         'showmenu': 'showmenu 400ms ease forwards',
         'hidemenu': 'hidemenu 400ms ease forwards',
