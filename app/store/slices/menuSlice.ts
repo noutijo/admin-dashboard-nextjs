@@ -17,9 +17,7 @@ const menuSlice = createSlice({
       state.isopen = !state.isopen;
     },
     setSelected: (state, { payload }) => {
-      state.selected = payload;
-      console.log(payload);
-      
+      state.selected = payload;      
     }
   },
 });

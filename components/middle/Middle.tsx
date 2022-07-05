@@ -14,9 +14,7 @@ export default function Main() {
           </label>
           <input
             type="date"
-            defaultValue="2019-07-22"
-            min="1900-01-01"
-            max="2100-01-01"
+            defaultValue="2022-01-01"
             className="bg-colorTransparent dark:invert outline-none"
           />
         </div>
