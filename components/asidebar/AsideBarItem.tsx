@@ -19,9 +19,8 @@ export default function AsideBarItem({
     const currentPath = router.pathname.slice(1);
 
     //get current path and add to store as selected menu item
-    router.pathname.slice(1) === ""
-      ? dispatch(setSelected("dashboard"))
-      : dispatch(setSelected(currentPath.toString()));
+    currentPath === ""
+      ? dispatch(setSelected("dashboard")) : dispatch(setSelected(currentPath.toString()));
     
   });
 
@@ -34,7 +33,7 @@ export default function AsideBarItem({
         <div
           onClick={makeMenuItemSelected}
           className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-all ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
-            title.toLocaleLowerCase() === selected
+            url.slice(1) === selected
               ? "activeMenu"
               : "text-colorInfoDark"
           }`}>
