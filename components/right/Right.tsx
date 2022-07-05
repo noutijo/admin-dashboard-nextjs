@@ -37,11 +37,12 @@ export default function Right() {
     <>
       <div className="sm:mt-2 md:mt-6 sm:w-[94%] sm:m-[0_auto_4rem]">
         <div className="sm:fixed md:relative sm:top-0 sm:left-0 flex justify-end sm:text-right items-center sm:gap-4 md:gap-8 sm:p-[0_0.8rem] md:p-[inherit] sm:h-[4.6rem] md:h-[inherit] sm:bg-colorWhite dark:sm:bg-colorWhite_DM md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-full sm:m-0 sm:z-[2] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none">
-          <button
-            className="sm:block md:hidden cursor-pointer sm:landscape:hidden"
-            onClick={handleDisplayMenu}>
-            <i className="bi-list text-2xl flex items-center justify-center"></i>
-          </button>
+          <div className="md:hidden cursor-pointer sm:landscape:hidden flex-1">
+            <button className="sm:block" onClick={handleDisplayMenu}>
+              <i className="bi-list text-2xl flex items-center"></i>
+            </button>
+          </div>
+
           <div className="bg-colorLight dark:bg-colorLight_DM flex justify-between items-center h-6 w-16 cursor-pointer rounded-md">
             <i
               className={`bi bi-brightness-high-fill text-sm w-1/2 h-full flex items-center justify-center ${
@@ -59,7 +60,7 @@ export default function Right() {
               }}></i>
           </div>
           <div className="flex  gap-8 text-right">
-            <div className="info md:block sm:hidden">
+            <div className="md:block sm:hidden">
               <p>
                 Hey, <b>Oreol Noumodong</b>
               </p>
