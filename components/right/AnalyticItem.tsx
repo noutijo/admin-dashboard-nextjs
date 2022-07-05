@@ -23,9 +23,7 @@ export default function AnalyticItem({
             <small className="text-muted">Last {time}</small>
           </div>
           <div className={`${status}`}>{percent}%</div>
-          <h3 className="animate-[flashlight_2s_ease-in-out_1] rounded-md px-2">
-            ${price}
-          </h3>
+          <h3 className="animate-flashlight rounded-md px-2">${price}</h3>
         </div>
       </div>
     </>

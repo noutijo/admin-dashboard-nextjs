@@ -66,6 +66,7 @@ module.exports = {
       animation: {
         'showmenu': 'showmenu 400ms ease forwards',
         'hidemenu': 'hidemenu 400ms ease forwards',
+        'flashlight': 'flashlight 2s ease-in-out 1',
       }
     }
   },
