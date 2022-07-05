@@ -45,9 +45,9 @@ export default function AsideBar() {
         </div>
 
         <div className="flex flex-col h-[88vh] relative top-12">
-          {data.map((item: menuItemType) => (
+          {data.map((item: menuItemType, index: number) => (
             <AsideBarItem
-              key={item.title}
+              key={index}
               title={item.title}
               iconName={item.iconName}
               url={item.url}
