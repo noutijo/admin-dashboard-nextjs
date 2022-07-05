@@ -10,7 +10,7 @@ export default function AsideBar() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC(Flash of unstyled content)
     if (localStorage.theme && localStorage.theme === "dark") {
       document.documentElement.classList.add("dark");
       // Whenever the user explicitly chooses dark mode
