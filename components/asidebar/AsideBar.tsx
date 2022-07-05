@@ -78,7 +78,7 @@ let data: menuItemType[] = [
   },
   {
     title: `Analytics`,
-    url: "/analystics",
+    url: "/analytics",
     iconName: `bi-activity`,
   },
   {
