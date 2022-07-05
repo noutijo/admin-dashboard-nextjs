@@ -17,7 +17,7 @@ export default function Main() {
             defaultValue="2019-07-22"
             min="1900-01-01"
             max="2100-01-01"
-            className="bg-colorTransparent dark:invert"
+            className="bg-colorTransparent dark:invert outline-none"
           />
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
