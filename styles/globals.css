@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply text-[14px];
-  }
-
   a {
     @apply text-colorInfoDark;
   }
@@ -49,21 +45,9 @@
     @apply text-colorDark dark:text-colorDark_DM;
   }
 
-  body {
-    @apply font-sans;
+  input[type="date"] {
+    @apply bg-colorTransparent text-colorDark dark:text-colorInfoDark;
   }
-
-  * {
-    @apply appearance-none outline-none box-border;
-  }
-
- input[type="date"] { 
-  @apply bg-colorTransparent text-colorDark dark:text-colorInfoDark;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  @apply dark:invert;
-}
 }
 
 @layer components {
@@ -91,7 +75,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply w-[2.8rem] h-[2.8rem] overflow-hidden rounded-full;
   }
 
-  /*aside bar menu*/
   .activeMenu {
     @apply text-colorPrimary bg-colorTransparent before:content-[''] before:w-[6px] before:h-full before:bg-colorPrimary;
   }

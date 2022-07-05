@@ -75,13 +75,15 @@ const Main = () => {
         <h1>Dashboard</h1>
 
         <div className="inline-block bg-colorLight dark:bg-colorLight_DM rounded-lg mt-4 p-[0.5rem_1.6rem]">
-          <label className="pr-1" htmlFor="date">Choose date: </label>
+          <label className="pr-1" htmlFor="date">
+            Choose date:{" "}
+          </label>
           <input
             type="date"
             defaultValue="2019-07-22"
             min="1900-01-01"
             max="2100-01-01"
-            className="bg-colorTransparent"
+            className="bg-colorTransparent dark:invert"
           />
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
