@@ -10,7 +10,7 @@ const menuSlice = createSlice({
   name: "menu",
   initialState: {
     isopen: false,
-    selected: "Dashboard"
+    selected: "dashboard"
   },
   reducers: {
     setMenuStatus: (state, action) => {
