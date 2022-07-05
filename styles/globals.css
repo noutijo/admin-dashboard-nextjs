@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-size: 0.875rem;
+    @apply text-[14px];
   }
 
   a {
@@ -50,7 +50,7 @@
   }
 
   body {
-    font-family: Poppins, sans-serif;
+    @apply font-sans;
   }
 
   * {

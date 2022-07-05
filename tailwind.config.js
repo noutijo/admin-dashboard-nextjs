@@ -1,3 +1,6 @@
+const plugin = require("tailwindcss/plugin");
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -13,6 +16,9 @@ module.exports = {
       '2xl': '1920px',
     },
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "Karla", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         "colorPrimary": "#7380ec",
         "colorDanger": "#ff7782",
@@ -50,5 +56,9 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+
+    })
+  ],
 }
