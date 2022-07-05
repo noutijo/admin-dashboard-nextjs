@@ -1,11 +1,11 @@
 import { orderType } from "@/types/types";
 
-const OrderItem = ({
+export default function OrderItem({
   productName,
   productNumber,
   paymentStatus,
   shipping,
-}: orderType) => {
+}: orderType) {
   return (
     <>
       <tr>
@@ -34,6 +34,4 @@ const OrderItem = ({
       </tr>
     </>
   );
-};
-
-export default OrderItem;
+}

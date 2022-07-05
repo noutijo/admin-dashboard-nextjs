@@ -1,6 +1,6 @@
 import { cardItemType } from "@/types/types";
 
-const CardItem = ({
+export default function CardItem({
   strokeDasharray,
   strokeDashoffset,
   bgcolor,
@@ -8,8 +8,8 @@ const CardItem = ({
   title,
   price,
   time,
-  percent
-}: cardItemType) => {
+  percent,
+}: cardItemType) {
   return (
     <>
       <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 transition-all duration-300 ease shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none p-7 overflow-auto">
@@ -42,6 +42,4 @@ const CardItem = ({
       </div>
     </>
   );
-};
-
-export default CardItem;
+}

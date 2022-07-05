@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Home = () => {
+export default function ErrorPage() {
     return (
         <>
             <Head>
@@ -29,5 +29,3 @@ const Home = () => {
         </>
     );
 };
-
-export default Home;

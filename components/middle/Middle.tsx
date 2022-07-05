@@ -2,73 +2,7 @@ import { cardItemType, orderType } from "@/types/types";
 import CardItem from "./CardItem";
 import OrderItem from "./OrderItem";
 
-const orders: orderType[] = [
-  {
-    productName: "nooutidev Shoe brand",
-    productNumber: "1234",
-    paymentStatus: "Due",
-    shipping: "Pending",
-  },
-  {
-    productName: "nooutidev t-shirt brand",
-    productNumber: "1235",
-    paymentStatus: "Refunded",
-    shipping: "Declined",
-  },
-  {
-    productName: "nooutidev cap brand",
-    productNumber: "1236",
-    paymentStatus: "Due",
-    shipping: "Pending",
-  },
-  {
-    productName: "nooutidev bag brand",
-    productNumber: "1237",
-    paymentStatus: "Paid",
-    shipping: "Delivered",
-  },
-  {
-    productName: "nooutidev phone brand",
-    productNumber: "1238",
-    paymentStatus: "Paid",
-    shipping: "Delivered",
-  },
-];
-
-const data: cardItemType[] = [
-  {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (97 / 100) * 188.6,
-    bgcolor: "bg-colorPrimary",
-    iconName: "bi-clipboard-data-fill",
-    title: "Total Sales",
-    price: 2521,
-    percent: 97,
-    time: 2,
-  },
-  {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (62 / 100) * 188.6,
-    bgcolor: "bg-colorDanger",
-    iconName: "bi-bar-chart-fill",
-    title: "Total Expenses",
-    price: 295,
-    percent: 62,
-    time: 24,
-  },
-  {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (44 / 100) * 188.6,
-    bgcolor: "bg-colorSuccess",
-    iconName: "bi-graph-up",
-    title: "Total Incomes",
-    price: 1084,
-    percent: 44,
-    time: 11,
-  },
-];
-
-const Main = () => {
+export default function Main() {
   return (
     <>
       <main className="overflow-x-scroll sm:p-[0_1rem]  md:p-[10px] md:mt-6">
@@ -135,6 +69,72 @@ const Main = () => {
       </main>
     </>
   );
-};
+}
 
-export default Main;
+//default products 
+const orders: orderType[] = [
+  {
+    productName: "nooutidev Shoe brand",
+    productNumber: "1234",
+    paymentStatus: "Due",
+    shipping: "Pending",
+  },
+  {
+    productName: "nooutidev t-shirt brand",
+    productNumber: "1235",
+    paymentStatus: "Refunded",
+    shipping: "Declined",
+  },
+  {
+    productName: "nooutidev cap brand",
+    productNumber: "1236",
+    paymentStatus: "Due",
+    shipping: "Pending",
+  },
+  {
+    productName: "nooutidev bag brand",
+    productNumber: "1237",
+    paymentStatus: "Paid",
+    shipping: "Delivered",
+  },
+  {
+    productName: "nooutidev phone brand",
+    productNumber: "1238",
+    paymentStatus: "Paid",
+    shipping: "Delivered",
+  },
+];
+
+//card items properties
+const data: cardItemType[] = [
+  {
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (97 / 100) * 188.6,
+    bgcolor: "bg-colorPrimary",
+    iconName: "bi-clipboard-data-fill",
+    title: "Total Sales",
+    price: 2521,
+    percent: 97,
+    time: 2,
+  },
+  {
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (62 / 100) * 188.6,
+    bgcolor: "bg-colorDanger",
+    iconName: "bi-bar-chart-fill",
+    title: "Total Expenses",
+    price: 295,
+    percent: 62,
+    time: 24,
+  },
+  {
+    strokeDasharray: 186,
+    strokeDashoffset: 188.6 - (44 / 100) * 188.6,
+    bgcolor: "bg-colorSuccess",
+    iconName: "bi-graph-up",
+    title: "Total Incomes",
+    price: 1084,
+    percent: 44,
+    time: 11,
+  },
+];

@@ -4,7 +4,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="grid lg:grid-cols-[14rem_auto_23rem] sm:grid-cols-[1fr] w-[96%] sm:w-[100%] md:w-[94%] md:grid-cols-[7rem_auto_23rem] gap-7 m-[0_auto] sm:mt-[8rem] md:mt-[inherit] sm:p-[0_1rem] md:p-[inherit]">
@@ -14,6 +14,4 @@ const Layout = ({ children }: LayoutProps) => {
       </div>
     </>
   );
-};
-
-export default Layout;
+}

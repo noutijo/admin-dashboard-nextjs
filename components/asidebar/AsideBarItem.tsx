@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { menuItemType } from "@/types/types";
 
-const AsideBarItem = ({
+export default function AsideBarItem({
   title,
   iconName,
   url,
   messageAccount,
-}: menuItemType) => {
+}: menuItemType) {
   return (
     <>
       <Link href={url}>
@@ -26,6 +26,4 @@ const AsideBarItem = ({
       </Link>
     </>
   );
-};
-
-export default AsideBarItem;
+}
