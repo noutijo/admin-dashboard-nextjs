@@ -22,7 +22,7 @@ export default function AsideBarItem({
   };
 
   return (
-    <>
+    <>  
       <Link href={url}>
         <div
           onClick={makeMenuItemSelected}
