@@ -19,11 +19,9 @@ export default function Main() {
           />
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
-          {data.map((item: cardItemType) => (
+          {data.map((item: cardItemType, index: number) => (
             <CardItem
-              key={item.title}
-              strokeDasharray={item.strokeDasharray}
-              strokeDashoffset={item.strokeDashoffset}
+              key={index}
               bgcolor={item.bgcolor}
               iconName={item.iconName}
               title={item.title}
@@ -47,9 +45,9 @@ export default function Main() {
               </tr>
             </thead>
             <tbody>
-              {orders.map((item: orderType) => (
+              {orders.map((item: orderType, index: number) => (
                 <OrderItem
-                  key={item.productName}
+                  key={index}
                   productName={item.productName}
                   productNumber={item.productNumber}
                   paymentStatus={item.paymentStatus}
@@ -69,7 +67,7 @@ export default function Main() {
   );
 }
 
-//default products 
+//default products
 const orders: orderType[] = [
   {
     productName: "nooutidev Shoe brand",
@@ -106,33 +104,27 @@ const orders: orderType[] = [
 //card items properties
 const data: cardItemType[] = [
   {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (97 / 100) * 188.6,
     bgcolor: "bg-colorPrimary",
     iconName: "bi-clipboard-data-fill",
     title: "Total Sales",
     price: 2521,
-    percent: 97,
+    percent: 90,
     time: 2,
   },
   {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (62 / 100) * 188.6,
     bgcolor: "bg-colorDanger",
     iconName: "bi-bar-chart-fill",
     title: "Total Expenses",
     price: 295,
-    percent: 62,
+    percent: 34,
     time: 24,
   },
   {
-    strokeDasharray: 186,
-    strokeDashoffset: 188.6 - (44 / 100) * 188.6,
     bgcolor: "bg-colorSuccess",
     iconName: "bi-graph-up",
     title: "Total Incomes",
     price: 1084,
-    percent: 44,
+    percent: 71,
     time: 11,
   },
 ];

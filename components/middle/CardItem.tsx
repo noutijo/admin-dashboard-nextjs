@@ -1,8 +1,6 @@
 import { cardItemType } from "@/types/types";
 
 export default function CardItem({
-  strokeDasharray,
-  strokeDashoffset,
   bgcolor,
   iconName,
   title,
@@ -27,8 +25,8 @@ export default function CardItem({
                 fill="none"
                 strokeWidth={5}
                 strokeLinecap="round"
-                strokeDasharray={strokeDasharray}
-                strokeDashoffset={strokeDashoffset}
+                strokeDasharray={188.6}
+                strokeDashoffset={188.6 - (percent / 100) * 188.6}
                 cx="40"
                 cy="40"
                 r="30"></circle>
