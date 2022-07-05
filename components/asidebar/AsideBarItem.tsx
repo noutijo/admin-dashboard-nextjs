@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { menuItemType } from "@/types/types";
-import { useDispatch, useSelector } from "react-redux";
-import { getSelected, setSelected } from "@app/store/slices/menuSlice";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function AsideBarItem({
   title,
@@ -11,29 +9,25 @@ export default function AsideBarItem({
   url,
   messageAccount,
 }: menuItemType) {
-  const dispatch = useDispatch();
-  const { selected } = useSelector(getSelected);
+  const [isSelected, SetIsSelected]=useState<string>("a");
   const router = useRouter();
 
   useEffect(() => {
-    const currentPath = router.pathname.slice(1);
-
     //get current path and add to store as selected menu item
-    currentPath === ""
-      ? dispatch(setSelected("dashboard")) : dispatch(setSelected(currentPath.toString()));
-    
-  });
+    SetIsSelected(router.pathname.slice(1).toString());
+  }, [router.pathname]);
 
   const makeMenuItemSelected = () => {
-    dispatch(setSelected(title));
+    SetIsSelected(url.slice(1));
   };
+
   return (
     <>
       <Link href={url}>
         <div
           onClick={makeMenuItemSelected}
           className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-all ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
-            url.slice(1) === selected
+            url.slice(1) === isSelected
               ? "activeMenu"
               : "text-colorInfoDark"
           }`}>
