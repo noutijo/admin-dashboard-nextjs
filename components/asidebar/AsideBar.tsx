@@ -21,7 +21,7 @@ export default function AsideBar() {
         }`}>
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center justify-center gap-3">
-            <Image src="/assets/logo.png" alt="logo" width={45} height={27} />
+            <Image src="/assets/logo.png" alt="logo" width={45} height={27} priority />
             <h2 className="text-2xl sm:block md:hidden lg:block ">
               noouti<span className="danger">dev</span>
             </h2>
