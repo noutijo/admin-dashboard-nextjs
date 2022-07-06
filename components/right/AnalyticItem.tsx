@@ -11,7 +11,7 @@ export default function AnalyticItem({
 }: analyticItemType) {
   return (
     <>
-      <div className="flex items-center gap-4 mb-[0.7rem] bg-colorWhite dark:bg-colorWhite_DM p-6 rounded-3xl shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none transition-all duration-300 ease-out">
+      <div className="flex items-center gap-4 mb-[0.7rem] bg-colorWhite dark:bg-colorWhite_DM p-6 rounded-3xl shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none transition-shadow duration-300 ease-out">
         <div
           className={`p-[0.6rem] text-colorWhite rounded-full flex items-center ${bgicon}`}>
           <i
