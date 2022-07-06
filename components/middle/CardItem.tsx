@@ -10,7 +10,7 @@ export default function CardItem({
 }: cardItemType) {
   return (
     <>
-      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 hover:transition-all duration-300 ease shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none p-7 overflow-auto">
+      <div className="bg-colorWhite dark:bg-colorWhite_DM rounded-3xl mt-4 hover:transition-shadow duration-300 ease shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none p-7 overflow-auto">
         <i
           className={`${iconName} flex justify-center items-center p-2 h-12 w-12 rounded-full text-colorWhite text-2xl ${bgcolor}`}></i>
         <div className="flex items-center justify-between">
