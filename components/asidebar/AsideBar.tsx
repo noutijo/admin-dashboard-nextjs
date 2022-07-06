@@ -29,7 +29,7 @@ export default function AsideBar() {
   return (
     <>
       <aside
-        className={`h-screen sm:fixed md:relative sm:left-0 sm:top-0 sm:bg-colorWhite/70 sm:backdrop-blur-md dark:sm:bg-colorWhite_DM/80 md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM  animate-showmenu sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden md:block sm:landscape:hidden md:landscape:block sm:${
+        className={`h-screen sm:fixed md:relative sm:left-0 sm:top-0 sm:bg-colorWhite/70 sm:backdrop-blur-md dark:sm:bg-colorWhite_DM/80 md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM  animate-showmenu sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden md:block md:landscape:block sm:${
           isopen ? "block" : "hidden"
         }`}>
         <div className="flex items-center justify-between mt-6">
