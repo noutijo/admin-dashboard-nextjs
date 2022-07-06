@@ -34,7 +34,7 @@ export default function Main() {
 
         <div className="mt-8">
           <h2 className="mb-3">Recent Orders</h2>
-          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate table-auto rounded-3xl p-[1.5rem] text-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none hover:transition-all duration-300 ease">
+          <table className="bg-colorWhite dark:bg-colorWhite_DM w-full border-separate table-auto rounded-3xl p-[1.5rem] text-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight ring-slate-300 hover:shadow-none">
             <thead>
               <tr>
                 <th className="sm:hidden lg:block">Product Name</th>
