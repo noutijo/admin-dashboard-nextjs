@@ -9,17 +9,16 @@ export default function OrderItem({
   return (
     <>
       <tr>
-        <td className="h-[2.8rem] border-solid border-b-colorLight dark:border-b-colorLight_DM borber-b-[1px] text-colorDarkVariant sm:hidden lg:block">
+        <td className="px-2 h-[2.8rem] border-solid border-b-colorLight dark:border-b-colorLight_DM borber-b-[1px] text-colorDarkVariant lg:block">
           {productName}
         </td>
-        <td className="h-[2.8rem] border-solid border-b-colorLight dark:border-colorLight_DM borber-b-[1px] text-colorDarkVariant">
+        <td className="px-2  h-[2.8rem] border-solid border-b-colorLight dark:border-colorLight_DM borber-b-[1px] text-colorDarkVariant">
           {productNumber}
         </td>
-        <td className="h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] text-colorDarkVariant">
+        <td className="px-2  h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] text-colorDarkVariant">
           {paymentStatus}
         </td>
-        <td
-          className={`h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] ${
+        <td className={`px-2 h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] ${
             shipping === "Declined"
               ? "danger"
               : shipping === "Pending"
@@ -28,7 +27,7 @@ export default function OrderItem({
           }`}>
           {shipping}
         </td>
-        <td className="h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] primary sm:hidden lg:block">
+        <td className="px-2  h-[2.8rem] border-solid border-colorLight dark:border-colorLight_DM borber-b-[1px] primary lg:block">
           Datails
         </td>
       </tr>
