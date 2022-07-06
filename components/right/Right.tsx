@@ -19,6 +19,7 @@ export default function Right() {
     }
   }, []);
 
+  //toggle theme
   const setTheme = (theme: string) => {
     document.documentElement.classList.add(`${theme}`);
     document.documentElement.classList.remove(

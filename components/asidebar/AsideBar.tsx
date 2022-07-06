@@ -1,26 +1,12 @@
 import Image from "next/image";
 import AsideBarItem from "./AsideBarItem";
 import { menuItemType } from "@/types/types";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getMenuStatus, setMenuStatus } from "@app/store/slices/menuSlice";
 
 export default function AsideBar() {
   const { isopen } = useSelector(getMenuStatus);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC(Flash of unstyled content)
-    if (localStorage.theme && localStorage.theme === "dark") {
-      document.documentElement.classList.add("dark");
-      // Whenever the user explicitly chooses dark mode
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.add("light");
-      // Whenever the user explicitly chooses light mode
-      localStorage.theme = "light";
-    }
-  });
 
   const handleDisplayMenu = () => {
     dispatch(setMenuStatus(""));
