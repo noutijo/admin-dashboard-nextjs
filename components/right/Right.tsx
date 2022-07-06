@@ -81,7 +81,7 @@ export default function Right() {
         <div className="mt-4">
           <h2 className="mb-[0.8rem]">Recents Upddates</h2>
 
-          <div className="bg-colorWhite dark:bg-colorWhite_DM p-7 rounded-3xl hover:transition-shadow duration-300 ease-linear shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none">
+          <div className="bg-colorWhite dark:bg-colorWhite_DM p-7 rounded-3xl shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none">
             {data.map((item: updateItemType) => (
               <UpdateItem
                 key={item.name}
