@@ -110,7 +110,7 @@ export default function Right() {
             />
           ))}
 
-          <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary hover:transition-shadow duration-300 ease-out flex items-center justify-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM dark:hover:ring-colorLight hover:shadow-none">
+          <div className="bg-colorTransparent mt-8 hover:bg-colorPrimary hover:text-colorWhite p-3 rounded-3xl text-colorPrimary border-2 border-dashed border-colorPrimary flex items-center justify-center shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM dark:hover:ring-colorLight hover:shadow-none">
             <div className="flex items-center justify-center w-full h-full gap-3 cursor-pointer">
               <i className="bi-plus-lg text-xl font-bold"></i>
               <h3 className="font-bold">Add Product</h3>
