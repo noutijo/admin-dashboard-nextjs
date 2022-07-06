@@ -86,7 +86,7 @@ export const analyticsData: analyticItemType[] = [
         price: 3282,
         percent: +32,
         time: "21 hours",
-        bgicon: "bg-colorSuccess",
+        bgicon: "bg-colorPrimary",
     },
 
     {
@@ -96,7 +96,7 @@ export const analyticsData: analyticItemType[] = [
         price: 1000,
         percent: -12,
         time: "23 hours",
-        bgicon: "bg-colorSuccess",
+        bgicon: "bg-colorDanger",
     },
     {
         title: "NEW CUSTOMERS",
@@ -146,7 +146,7 @@ export const ordersData: orderType[] = [
 //card items 
 export const cardsData: cardItemType[] = [
     {
-        bgcolor: "bg-colorSuccess",
+        bgcolor: "bg-colorPrimary",
         iconName: "bi-clipboard-data-fill",
         title: "Total Sales",
         price: 2521,
@@ -154,7 +154,7 @@ export const cardsData: cardItemType[] = [
         time: 2,
     },
     {
-        bgcolor: "bg-colorSuccess",
+        bgcolor: "bg-colorDanger",
         iconName: "bi-bar-chart-fill",
         title: "Total Expenses",
         price: 295,
