@@ -15,8 +15,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"],
       "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@data/*": ["data/*"],
       "@/types/*": ["types/*"]
     },
     "incremental": true

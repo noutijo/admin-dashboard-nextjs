@@ -1,4 +1,4 @@
-import { cardItemType, orderType } from "@/types/types";
+import { cardsData, ordersData } from "@data/data";
 import CardItem from "./CardItem";
 import OrderItem from "./OrderItem";
 
@@ -19,7 +19,7 @@ export default function Main() {
           />
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-6 gap-0">
-          {data.map((item: cardItemType, index: number) => (
+          {cardsData.map((item, index) => (
             <CardItem
               key={index}
               bgcolor={item.bgcolor}
@@ -45,7 +45,7 @@ export default function Main() {
               </tr>
             </thead>
             <tbody>
-              {orders.map((item: orderType, index: number) => (
+              {ordersData.map((item, index) => (
                 <OrderItem
                   key={index}
                   productName={item.productName}
@@ -66,65 +66,3 @@ export default function Main() {
     </>
   );
 }
-
-//default products
-const orders: orderType[] = [
-  {
-    productName: "nooutidev Shoe brand",
-    productNumber: "1234",
-    paymentStatus: "Due",
-    shipping: "Pending",
-  },
-  {
-    productName: "nooutidev t-shirt brand",
-    productNumber: "1235",
-    paymentStatus: "Refunded",
-    shipping: "Declined",
-  },
-  {
-    productName: "nooutidev cap brand",
-    productNumber: "1236",
-    paymentStatus: "Due",
-    shipping: "Pending",
-  },
-  {
-    productName: "nooutidev bag brand",
-    productNumber: "1237",
-    paymentStatus: "Paid",
-    shipping: "Delivered",
-  },
-  {
-    productName: "nooutidev phone brand",
-    productNumber: "1238",
-    paymentStatus: "Paid",
-    shipping: "Delivered",
-  },
-];
-
-//card items properties
-const data: cardItemType[] = [
-  {
-    bgcolor: "bg-colorPrimary",
-    iconName: "bi-clipboard-data-fill",
-    title: "Total Sales",
-    price: 2521,
-    percent: 90,
-    time: 2,
-  },
-  {
-    bgcolor: "bg-colorDanger",
-    iconName: "bi-bar-chart-fill",
-    title: "Total Expenses",
-    price: 295,
-    percent: 34,
-    time: 24,
-  },
-  {
-    bgcolor: "bg-colorSuccess",
-    iconName: "bi-graph-up",
-    title: "Total Incomes",
-    price: 1084,
-    percent: 71,
-    time: 11,
-  },
-];

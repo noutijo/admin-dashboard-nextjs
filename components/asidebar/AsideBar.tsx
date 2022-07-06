@@ -1,22 +1,23 @@
 import Image from "next/image";
 import AsideBarItem from "./AsideBarItem";
-import { menuItemType } from "@/types/types";
-import { useDispatch, useSelector } from "react-redux";
-import { getMenuStatus, setMenuStatus } from "@app/store/slices/menuSlice";
+import { useDrawer } from "@hooks/AppMenuProvider";
+import { menuItemsData } from "@data/data";
 
 export default function AsideBar() {
-  const { isopen } = useSelector(getMenuStatus);
-  const dispatch = useDispatch();
+  const drawer = useDrawer();
 
+  //handle displaying drawer
   const handleDisplayMenu = () => {
-    dispatch(setMenuStatus(""));
+    drawer.setMenuStatus((state) => {
+      return !state;
+    });
   };
-  
+
   return (
     <>
       <aside
         className={`h-screen sm:fixed md:relative sm:left-0 sm:top-0 sm:bg-colorWhite/70 sm:backdrop-blur-md dark:sm:bg-colorWhite_DM/80 md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM sm:animate-showmenu md:animate-none sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden md:block md:landscape:block sm:${
-          isopen ? "block" : "hidden"
+          drawer.isopen ? "block" : "hidden"
         }`}>
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center justify-center gap-3">
@@ -31,7 +32,7 @@ export default function AsideBar() {
         </div>
 
         <div className="flex flex-col h-[88vh] relative top-12">
-          {data.map((item: menuItemType, index: number) => (
+          {menuItemsData.map((item, index) => (
             <AsideBarItem
               key={index}
               title={item.title}
@@ -45,57 +46,3 @@ export default function AsideBar() {
     </>
   );
 }
-
-let data: menuItemType[] = [
-  {
-    title: `Dashboard`,
-    url: "/",
-    iconName: `bi-grid-1x2-fill`,
-  },
-  {
-    title: `Customers`,
-    url: "/customers",
-    iconName: `bi-person`,
-  },
-  {
-    title: `Orders`,
-    url: "/orders",
-    iconName: `bi-receipt-cutoff`,
-  },
-  {
-    title: `Analytics`,
-    url: "/analytics",
-    iconName: `bi-activity`,
-  },
-  {
-    title: `Messages`,
-    url: "/messages",
-    iconName: `bi-envelope`,
-    messageAccount: 23,
-  },
-  {
-    title: `Products`,
-    url: "/products",
-    iconName: `bi-clipboard-data`,
-  },
-  {
-    title: `Reports`,
-    url: "/reports",
-    iconName: `bi-exclamation-octagon`,
-  },
-  {
-    title: `Settings`,
-    url: "/settings",
-    iconName: `bi-gear-wide`,
-  },
-  {
-    title: `Add Product`,
-    url: "/add_product",
-    iconName: `bi-plus-lg`,
-  },
-  {
-    title: `Logout`,
-    url: "/logout",
-    iconName: `bi-box-arrow-right`,
-  },
-];

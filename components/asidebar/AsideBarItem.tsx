@@ -9,11 +9,11 @@ export default function AsideBarItem({
   url,
   messageAccount,
 }: menuItemType) {
-  const [isSelected, SetIsSelected]=useState<string>("a");
+  const [isSelected, SetIsSelected] = useState<string>("init");
   const router = useRouter();
 
   useEffect(() => {
-    //get current path and add to store as selected menu item
+    //get current path and add to state as selected menu item
     SetIsSelected(router.pathname.slice(1).toString());
   }, [router.pathname]);
 
@@ -22,14 +22,12 @@ export default function AsideBarItem({
   };
 
   return (
-    <>  
+    <>
       <Link href={url}>
         <div
           onClick={makeMenuItemSelected}
           className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-[margin] ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
-            url.slice(1) === isSelected
-              ? "activeMenu"
-              : "text-colorInfoDark"
+            url.slice(1) === isSelected ? "activeMenu" : "text-colorInfoDark"
           }`}>
           <i className={`bi text-xl ${iconName}`}></i>
           <h3 className="font-medium md:hidden lg:block">{title}</h3>
@@ -44,4 +42,3 @@ export default function AsideBarItem({
     </>
   );
 }
-//transition

@@ -1,23 +1,29 @@
-import { setMenuStatus } from "app/store/slices/menuSlice";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import { updateItemType } from "../../types/types";
 import { analyticItemType } from "@/types/types";
 import AnalyticItem from "./AnalyticItem";
 import UpdateItem from "./UpdateItem";
+import { useDrawer } from "hooks/AppMenuProvider";
+import { analyticsData, updatesData } from "@data/data";
+
+type propsType = {
+  theme: string;
+};
 
 export default function Right() {
-  const dispatch = useDispatch();
-  const [currentTheme, setCurrentTheme] = useState<string>("");
+  const drawer = useDrawer();
 
+  const [currentTheme, setCurrentTheme] = useState<string>("");
+ //console.log(props.theme);
+ 
   useEffect(() => {
     if (localStorage.theme && localStorage.theme === "dark") {
       setCurrentTheme("dark");
     } else {
       setCurrentTheme("light");
     }
-  }, []);
+  }, []); 
 
   //toggle theme
   const setTheme = (theme: string) => {
@@ -31,7 +37,10 @@ export default function Right() {
   };
 
   const handleDisplayMenu = () => {
-    dispatch(setMenuStatus(""));
+    //dispatch(setMenuStatus(""));
+    drawer.setMenuStatus((state) => {
+      return !state;
+    });
   };
 
   return (
@@ -82,7 +91,7 @@ export default function Right() {
           <h2 className="mb-[0.8rem]">Recents Upddates</h2>
 
           <div className="bg-colorWhite dark:bg-colorWhite_DM p-7 rounded-3xl shadow-md shadow-colorInfoLight dark:shadow-colorBackground_DM hover:ring-1 dark:hover:ring-colorLight  ring-slate-300 hover:shadow-none">
-            {data.map((item: updateItemType) => (
+            {updatesData.map((item: updateItemType) => (
               <UpdateItem
                 key={item.name}
                 name={item.name}
@@ -121,57 +130,3 @@ export default function Right() {
     </>
   );
 }
-
-//default analytics datas
-const analyticsData: analyticItemType[] = [
-  {
-    title: "ONLINE ORDERS",
-    status: "success",
-    iconName: "bi-cart-fill",
-    price: 3282,
-    percent: +32,
-    time: "21 hours",
-    bgicon: "bg-colorPrimary",
-  },
-
-  {
-    title: "OFFLINE ORDERS",
-    status: "danger",
-    iconName: "bi-bag-fill",
-    price: 1000,
-    percent: -12,
-    time: "23 hours",
-    bgicon: "bg-colorDanger",
-  },
-  {
-    title: "NEW CUSTOMERS",
-    status: "success",
-    iconName: "bi-person-fill",
-    price: 998,
-    percent: +25,
-    time: "3 hours",
-    bgicon: "bg-colorSuccess",
-  },
-];
-
-//default updates datas
-const data: updateItemType[] = [
-  {
-    name: "Nkemtakeh Cels",
-    src: "https://cdn6.f-cdn.com/ppic/141780185/logo/41022312/ekYZm/profile_logo_.jpg",
-    message: "received his order of MacBook Pro 2021",
-    time: "2 minutes",
-  },
-  {
-    name: "Pricilia Ken",
-    src: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    message: "received his order of Iphone 14 Pro Max",
-    time: "3 minutes",
-  },
-  {
-    name: "Edouard Betsem",
-    src: "https://media-exp1.licdn.com/dms/image/C4D03AQGQs2GcMMnhug/profile-displayphoto-shrink_200_200/0/1639051210992?e=1661990400&v=beta&t=GqpfiB_anMpbCHUTlRrMmDY2IfCAqZKJFostITDhU6c",
-    message: "received his order of nooutidev T-shirt",
-    time: "4 minutes",
-  },
-];
