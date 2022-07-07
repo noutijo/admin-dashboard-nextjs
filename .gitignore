@@ -36,10 +36,3 @@ yarn.lock
 
 # typescript
 *.tsbuildinfo
-
-
-# Contentlayer
-.contentlayer
-
-#redux local test
-reduxtest.js
