@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppMenuProvider>
       <Layout>
-        <Script src="/theme.js" strategy="beforeInteractive" />
+        <Script src="/theme.js" strategy="beforeInteractive" defer/>
         <Component {...pageProps} />
       </Layout>
     </AppMenuProvider>
