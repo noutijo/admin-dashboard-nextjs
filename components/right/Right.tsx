@@ -7,15 +7,9 @@ import UpdateItem from "./UpdateItem";
 import { useDrawer } from "hooks/AppMenuProvider";
 import { analyticsData, updatesData } from "@data/data";
 
-type propsType = {
-  theme: string;
-};
-
 export default function Right() {
   const drawer = useDrawer();
-
   const [currentTheme, setCurrentTheme] = useState<string>("");
- //console.log(props.theme);
  
   useEffect(() => {
     if (localStorage.theme && localStorage.theme === "dark") {
@@ -37,7 +31,7 @@ export default function Right() {
   };
 
   const handleDisplayMenu = () => {
-    //dispatch(setMenuStatus(""));
+    //dispatch(setMenuStatus());
     drawer.setMenuStatus((state) => {
       return !state;
     });
