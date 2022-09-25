@@ -70,8 +70,8 @@ export const updatesData: updateItemType[] = [
         time: "3 minutes",
     },
     {
-        name: "Edouard Betsem",
-        src: "https://media-exp1.licdn.com/dms/image/C4D03AQGQs2GcMMnhug/profile-displayphoto-shrink_200_200/0/1639051210992?e=1661990400&v=beta&t=GqpfiB_anMpbCHUTlRrMmDY2IfCAqZKJFostITDhU6c",
+        name: "Tematio Zambou",
+        src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.linkedin.com%2Fpub%2Fdir%2F%2B%2FZambou&psig=AOvVaw1X-86hbgNuRjjF6BqCKjZ_&ust=1664228814370000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMDXgs31sPoCFQAAAAAdAAAAABAH",
         message: "received his order of nooutidev T-shirt",
         time: "4 minutes",
     },
