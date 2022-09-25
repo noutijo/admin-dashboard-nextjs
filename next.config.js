@@ -12,7 +12,7 @@ module.exports = {
       "cdn6.f-cdn.com",
       "media-exp1.licdn.com",
       "images.pexels.com",
-      "google.com",
+      "linkedin.com",
     ],
   },
 };
