@@ -71,7 +71,7 @@ export const updatesData: updateItemType[] = [
     },
     {
         name: "Tematio Zambou",
-        src: "https://www.linkedin.com/in/rovel-dylan-tematio-zambou-596303172?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACj624IBLS-U6Zfj5j6TGBuqdQERbobD-Z8&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_people%3BKdMhBOFKRIeubMglxTDwCA%3D%3D",
+        src: "https://media-exp1.licdn.com/dms/image/C4D03AQF6oCIN8ZRk-w/profile-displayphoto-shrink_800_800/0/1634033821330?e=1669852800&v=beta&t=OrlyJ0Pdpcgzr1qdw-KTY6xUf8EiegqU9Mv7WgtCSeI",
         message: "received his order of nooutidev T-shirt",
         time: "4 minutes",
     },
