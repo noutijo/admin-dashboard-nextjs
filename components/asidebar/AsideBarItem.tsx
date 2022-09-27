@@ -26,7 +26,7 @@ export default function AsideBarItem({
       <Link href={url}>
         <div
           onClick={makeMenuItemSelected}
-          className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-[margin] ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
+          className={`flex ml-2 gap-4 items-center hover:text-colorPrimary relative md:h-[3.7rem] hover:ml-4 transition-[margin] cursor-pointer ease-out duration-300 sm:h-[3.4rem] md:w-[auto] sm:w-[100%] last:mt-8 ${
             url.slice(1) === isSelected ? "activeMenu" : "text-colorInfoDark"
           }`}>
           <i className={`bi text-xl ${iconName}`}></i>
