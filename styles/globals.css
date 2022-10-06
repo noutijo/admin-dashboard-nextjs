@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    @apply w-[8px] 
+}
+
+::-webkit-scrollbar-track {
+     @apply bg-transparent
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-colorDark rounded-full;
+}
+
 @layer base {
   a {
     @apply text-colorInfoDark;

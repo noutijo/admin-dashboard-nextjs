@@ -10,14 +10,14 @@ import { analyticsData, updatesData } from "@data/data";
 export default function Right() {
   const drawer = useDrawer();
   const [currentTheme, setCurrentTheme] = useState<string>("");
- 
+
   useEffect(() => {
     if (localStorage.theme && localStorage.theme === "dark") {
       setCurrentTheme("dark");
     } else {
       setCurrentTheme("light");
     }
-  }, []); 
+  }, []);
 
   //toggle theme
   const setTheme = (theme: string) => {
@@ -63,7 +63,7 @@ export default function Right() {
                 setTheme("dark");
               }}></i>
           </div>
-          <div className="flex  gap-8 text-right">
+          <div className="flex gap-8 text-right">
             <div className="md:block sm:hidden">
               <p>
                 Hey, <b>Oreol Noumodong</b>
