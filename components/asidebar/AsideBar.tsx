@@ -29,7 +29,7 @@ export default function AsideBar() {
               priority
             />
             <h2 className="text-2xl sm:block md:hidden lg:block ">
-              noouti<span className="danger">dev</span>
+              nooutidev
             </h2>
           </div>
           <div className="sm:block md:hidden" onClick={handleDisplayMenu}>
