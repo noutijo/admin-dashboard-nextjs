@@ -83,6 +83,10 @@
     @apply text-colorWarning;
   }
 
+  .ring-style {
+     @apply ring-[1px] ring-gray-600/10;
+    }
+
   .profile-photo {
     @apply w-[2.8rem] h-[2.8rem] overflow-hidden rounded-full;
   }

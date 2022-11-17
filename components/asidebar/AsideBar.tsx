@@ -16,12 +16,18 @@ export default function AsideBar() {
   return (
     <>
       <aside
-        className={`h-screen sm:fixed md:relative sm:left-0 sm:top-0 sm:bg-colorWhite/70 sm:backdrop-blur-md dark:sm:bg-colorWhite_DM/80 md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM sm:animate-showmenu md:animate-none sm:hover:shadow-none sm:p-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden md:block md:landscape:block sm:${
-          drawer.isopen ? "block" : "hidden"
+        className={`h-screen sm:fixed md:relative sm:left-[-100%] md:left-[0%] sm:top-0 sm:bg-colorWhite/70 sm:backdrop-blur-md dark:sm:bg-colorWhite_DM/80 md:bg-colorTransparent dark:md:bg-colorTransparent sm:w-[18rem] md:w-[auto] sm:z-[3] sm:dark:shadow-colorWhite_DM sm:hover:shadow-none sm:px-6 md:p-[inherit] sm:overflow-y-auto md:overflow-hidden md:block md:landscape:block transition-all duration-300 ease-out pb-[100px] sm:ring-style md:ring-0 ${ 
+          drawer.isopen ? "sm:left-[0%]" : ""
         }`}>
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center justify-center gap-3">
-            <Image src="/assets/logo.png" alt="logo" width={45} height={27} priority />
+            <Image
+              src="/assets/logo.png"
+              alt="logo"
+              width={45}
+              height={27}
+              priority
+            />
             <h2 className="text-2xl sm:block md:hidden lg:block ">
               noouti<span className="danger">dev</span>
             </h2>
@@ -31,7 +37,7 @@ export default function AsideBar() {
           </div>
         </div>
 
-        <div className="flex flex-col h-[88vh] relative top-12">
+        <div className="flex flex-col relative top-12">
           {menuItemsData.map((item, index) => (
             <AsideBarItem
               key={index}
