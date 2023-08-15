@@ -70,8 +70,8 @@ export const updatesData: updateItemType[] = [
         time: "3 minutes",
     },
     {
-        name: "Tematio Zambou",
-        src: "https://media-exp1.licdn.com/dms/image/C4D03AQF6oCIN8ZRk-w/profile-displayphoto-shrink_800_800/0/1634033821330?e=1669852800&v=beta&t=OrlyJ0Pdpcgzr1qdw-KTY6xUf8EiegqU9Mv7WgtCSeI",
+        name: "nooutidev",
+        src: "https://avatars.githubusercontent.com/u/62446012?s=400&u=44d0d992dcfe32175d3525b24c7d2587ee311dde&v=4",
         message: "received his order of nooutidev T-shirt",
         time: "4 minutes",
     },
