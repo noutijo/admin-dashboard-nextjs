@@ -13,6 +13,7 @@ module.exports = {
       "media-exp1.licdn.com",
       "images.pexels.com",
       "image-uviadeo.journaldunet.com",
+      "avatars.githubusercontent.com"
     ],
   },
 };
